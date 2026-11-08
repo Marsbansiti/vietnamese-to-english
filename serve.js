@@ -5,7 +5,9 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const ROOT = __dirname;
 const DEFAULT_FILE = path.join(ROOT, 'index.html');
-const REDESIGN_FILE = path.join(ROOT, 'index_redesign_v2.html');
+const REDESIGN_FILE = fs.existsSync(path.join(ROOT, 'index_redesign_v2 (2).html'))
+  ? path.join(ROOT, 'index_redesign_v2 (2).html')
+  : path.join(ROOT, 'index_redesign_v2.html');
 const ZIP_FILE = path.join(ROOT, 'vietnamese-to-english.zip');
 
 const MIME_TYPES = {
@@ -79,7 +81,9 @@ const server = http.createServer((req, res) => {
 
   // Route aliases for Redesign v2
   if (reqPath === '/v2' || reqPath === '/redesign' || reqPath === '/modern') {
-    reqPath = fs.existsSync(REDESIGN_FILE) ? '/index_redesign_v2.html' : '/index_redesign_v2 (2).html';
+    reqPath = fs.existsSync(path.join(ROOT, 'index_redesign_v2 (2).html'))
+      ? '/index_redesign_v2 (2).html'
+      : '/index_redesign_v2.html';
   }
 
   // Root or default file aliases

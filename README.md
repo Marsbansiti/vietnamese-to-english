@@ -268,12 +268,28 @@ vietnamese-to-english/
 ├── .gitignore              # Ignores OS artifacts, zip archives, and logs
 ├── LICENSE                 # Open-source MIT License
 ├── README.md               # In-depth platform documentation
-├── index.html              # Classic visual vocabulary web application
-├── index_redesign_v2.html  # Modern redesigned web app with listening & bilingual UI
-├── index (2).html          # Original backup copy of classic version
-├── index_redesign_v2 (2).html # Original backup copy of redesign v2
+├── index.html              # Classic visual vocabulary web application (4.7 MB)
+├── index_redesign_v2 (2).html # Latest flagship redesign with listening & bilingual UI (4.95 MB)
+├── index_redesign_v2.html  # Clean-named redesign application (4.85 MB)
+├── index (2).html          # Byte-for-byte replica of classic version
 ├── serve.js                # Lightweight static Node.js server with routes & downloads
-└── start-server.bat        # Windows double-click shortcut to launch server
+├── start-server.bat        # Windows double-click shortcut to launch server
+│
+├── 📦 Development Iterations & Redesigns:
+│   ├── visual_vocabulary_redesigned.html (and .backup, .bak, (1))
+│   ├── index_redesign.html (and (1), (2))
+│   ├── index_redesign_v2 (1).html & .bak
+│   ├── vietnamese_english_vocabulary.html
+│   └── visual_vocabulary_vietnamese_to_english.html (and - Copy)
+│
+├── 📦 Version Archive (Iterations 1 through 25):
+│   ├── index (1).html through index (25).html
+│   └── index.html backups (.bak, .bak_v2, .prev_v2.bak, .backup_before_interactive_redesign)
+│
+└── 🎮 Standalone Companion Demos:
+    ├── Spark Dating App.html          # Interactive dating app web UI demo
+    ├── gemini-code-1793219268846.html # Neon Car Driving: Car Race 3D web demo
+    └── gemini-code-1793219236130.html # Neon Car Driving: Car Race 3D web demo (alt)
 ```
 
 ---

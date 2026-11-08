@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Từ vựng Hình ảnh — Visual Vocabulary (Vietnamese → English)</title>
+<meta name="description" content="Thư viện từ vựng Tiếng Việt sang Tiếng Anh qua hình ảnh minh họa: chủ đề từ điển hình ảnh và bài học CEFR A1–C2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0c; --panel:#111114; --panel2:#17171b; --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#f3efe8; --sub:#a8a49b; --mute:#6f6c66; --gold:#c8a96b; --gold-ink:#1a1407;
+  --h-s:22%; --h-l1:19%; --h-l2:9%;
+  --wcb:#8db8ff; --wcp:#6fa1e6; --wcx:#1b1b20; --card:330px; --tile:190px; --hdr:96px; --pad:clamp(16px,3vw,40px);
+  --serif:'Instrument Serif','Cormorant Garamond',Georgia,serif;
+  --sans:'Plus Jakarta Sans','Noto Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+[data-theme="light"]{
+  --bg:#ffffff; --panel:#ffffff; --panel2:#f4f5f9; --line:rgba(16,24,40,.09); --line2:rgba(16,24,40,.18);
+  --text:#16181d; --sub:#535a66; --mute:#868d99; --gold:#1f56b3; --gold-ink:#fff;
+  --wcb:#1b4b9b; --wcp:#3a78c4; --wcx:#f6f7fb;
+  --h-s:30%; --h-l1:91%; --h-l2:82%;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden;transition:background-color .25s,color .25s}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img{display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Header ---------- */
+.hdr{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border-bottom:1px solid var(--line);transition:transform .35s var(--ease)}
+.hdr.hide{transform:translateY(-100%)}
+.hdr-row{display:flex;align-items:center;gap:14px;padding:10px var(--pad)}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.brand-mark{width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:var(--gold);letter-spacing:-.02em;font-weight:700}
+.brand-name{font-family:var(--serif);font-size:22px;letter-spacing:.005em;line-height:1}
+.brand-name em{color:var(--gold);font-style:italic}
+.search{flex:1 1 auto;max-width:560px;margin-left:auto;position:relative}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mute);pointer-events:none}
+.search input{width:100%;height:40px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:0 54px 0 40px;font:500 .88rem var(--sans);outline:0;transition:border-color .2s,background .2s}
+.search input::placeholder{color:var(--mute)}
+.search input:focus{border-color:var(--gold)}
+.search kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font:600 .68rem var(--sans);color:var(--mute);border:1px solid var(--line2);border-radius:6px;padding:2px 6px}
+.tools{display:flex;gap:6px;align-items:center}
+.ibtn{height:40px;min-width:40px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--panel);display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 .78rem var(--sans);color:var(--sub);transition:border-color .2s,color .2s,background .2s}
+.ibtn:hover{border-color:var(--line2);color:var(--text)}
+.ibtn.on{border-color:var(--gold);color:var(--gold)}
+.dens{display:inline-flex;border:1px solid var(--line);border-radius:99px;background:var(--panel);overflow:hidden}
+.dens button{height:38px;padding:0 12px;font:700 .72rem var(--sans);color:var(--mute)}
+.dens button.on{color:var(--gold-ink);background:var(--gold)}
+.chips{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 var(--pad) 10px}
+.chips::-webkit-scrollbar{display:none}
+.chip-nav{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px;border-radius:99px;font:600 .8rem var(--sans);color:var(--sub);border:1px solid transparent;transition:color .2s,background .2s,border-color .2s;white-space:nowrap}
+.chip-nav i{width:7px;height:7px;border-radius:50%;background:var(--ac,var(--gold))}
+.chip-nav small{font:600 .7rem var(--sans);color:var(--mute)}
+.chip-nav:hover{color:var(--text);background:var(--panel)}
+.chip-nav.on{color:var(--text);background:var(--panel);border-color:var(--line2)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:clamp(22px,3.4vw,46px) var(--pad);border-bottom:1px solid var(--line);overflow:hidden;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px clamp(24px,5vw,80px);align-items:end}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 300px at 85% -20%,color-mix(in srgb,var(--gold) 16%,transparent),transparent 70%);pointer-events:none}
+.hero>*{position:relative}
+.eyebrow{font:700 .68rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.015em;margin:12px 0 12px}
+.hero h1 em{color:var(--gold)}
+.hero p.lead{max-width:58ch;color:var(--sub);font-size:clamp(.86rem,1.05vw,.98rem);line-height:1.6}
+.hero-r{display:flex;flex-direction:column;gap:20px;align-items:flex-end}
+.stats{display:flex;gap:clamp(18px,3vw,44px)}
+.stat b{display:block;font:400 clamp(1.5rem,2.6vw,2.2rem)/1 var(--serif)}
+.stat span{font:600 .62rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.hero-r{align-items:flex-start}.cta{justify-content:flex-start}}
+@media (max-width:700px){.hero p.lead{display:none}.stats{gap:20px}.hero{padding-top:18px;padding-bottom:18px}}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:99px;font:700 .84rem var(--sans);border:1px solid var(--line2);color:var(--text);transition:transform .2s var(--ease),background .2s,border-color .2s}
+.btn:hover{border-color:var(--gold);transform:translateY(-1px)}
+.btn.pri{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.btn.pri:hover{filter:brightness(1.08)}
+.btn.sm{height:36px;padding:0 14px;font-size:.78rem}
+
+/* ---------- Grids & tiles ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile),1fr));gap:2px}
+.band{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px var(--pad) 14px;margin-top:14px;border-top:1px solid var(--line)}
+.grid>.band:first-child{margin-top:0;border-top:0}
+.band-l{display:flex;align-items:center;gap:16px;min-width:0}
+.lv{font:400 clamp(1.7rem,3vw,2.5rem)/1 var(--serif);color:var(--ac,var(--gold));min-width:2.1ch}
+.band h2{font:700 .95rem var(--sans);letter-spacing:.01em}
+.band p{font:500 .78rem var(--sans);color:var(--mute);margin-top:3px}
+.band a.more{font:700 .76rem var(--sans);color:var(--sub);white-space:nowrap;display:inline-flex;gap:6px;align-items:center;transition:color .2s}
+.band a.more:hover{color:var(--gold)}
+
+/* ---------- Banner (topic / collection) ---------- */
+.banner{position:relative;overflow:hidden;border-bottom:1px solid var(--line);isolation:isolate}
+.banner-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(34px) saturate(1.15);opacity:.55;z-index:-2;transform:scale(1.1)}
+.banner::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 35%,transparent),var(--bg) 96%)}
+.banner-in{padding:clamp(24px,4vw,52px) var(--pad) clamp(22px,3vw,34px);display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between;align-items:flex-end}
+.crumbs{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:600 .74rem var(--sans);color:var(--mute);margin-bottom:16px}
+.crumbs a:hover{color:var(--gold)}
+.crumbs span.sep{opacity:.5}
+.banner h1{font:400 clamp(2.1rem,5.2vw,4.4rem)/1.06 var(--serif);letter-spacing:-.015em}
+.banner .sub-en{font:600 clamp(1rem,1.8vw,1.35rem)/1.3 var(--sans);color:var(--gold);margin-top:6px}
+.banner .meta{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:16px;font:600 .82rem var(--sans);color:var(--sub)}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:99px;border:1px solid var(--line2);font:700 .68rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--ac,var(--gold))}
+.pill.en-pill{background:color-mix(in srgb,var(--gold) 14%,transparent);border-color:color-mix(in srgb,var(--gold) 45%,transparent);color:var(--gold);text-transform:none;letter-spacing:.02em;font-size:.76rem}
+.prog{display:inline-flex;align-items:center;gap:9px}
+.prog b{display:inline-block;width:110px;height:4px;border-radius:9px;background:var(--line2);overflow:hidden;position:relative}
+.prog b i{position:absolute;left:0;top:0;bottom:0;background:var(--gold);width:var(--p,0%)}
+.banner .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- Toolbar ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:14px var(--pad);border-bottom:1px solid var(--line)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:99px;background:var(--panel);overflow:hidden}
+.seg a,.seg button{height:34px;padding:0 15px;font:700 .74rem var(--sans);color:var(--mute);display:inline-flex;align-items:center;gap:6px;transition:color .2s,background .2s}
+.seg .on{background:var(--gold);color:var(--gold-ink)}
+.seg a:not(.on):hover,.seg button:not(.on):hover{color:var(--text)}
+.filter{position:relative;flex:1 1 220px;max-width:340px}
+.filter input{width:100%;height:36px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:0 14px;font:500 .82rem var(--sans);outline:0}
+.filter input:focus{border-color:var(--gold)}
+.count{font:600 .76rem var(--sans);color:var(--mute)}
+.tb-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.empty{grid-column:1/-1;padding:90px var(--pad);text-align:center;color:var(--sub)}
+.empty b{display:block;font:400 2rem var(--serif);color:var(--text);margin-bottom:8px}
+.sec-title{padding:30px var(--pad) 16px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.sec-title h2{font:400 clamp(1.5rem,2.6vw,2.2rem) var(--serif)}
+.sec-title span{font:600 .78rem var(--sans);color:var(--mute)}
+.nextprev{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}
+.np{display:flex;flex-direction:column;gap:6px;padding:clamp(22px,4vw,44px) var(--pad);background:var(--panel);transition:background .25s}
+.np:hover{background:var(--panel2)}
+.np small{font:700 .64rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.np b{font:400 clamp(1.3rem,2.6vw,2.2rem)/1.1 var(--serif)}
+.np.next{text-align:right;align-items:flex-end}
+.np.off{opacity:.35;pointer-events:none}
+.sentinel{height:2px}
+.foot{padding:40px var(--pad) 60px;color:var(--mute);font:500 .74rem/1.6 var(--sans);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);margin-top:2px}
+.foot a{color:var(--sub);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Study overlay (WITH MUCH BIGGER PICTURE) ---------- */
+.study{position:fixed;inset:0;z-index:60;background:var(--bg);display:grid;grid-template-columns:minmax(0,1fr) clamp(370px,34vw,520px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.study.open{opacity:1;visibility:visible}
+.st-stage{position:relative;overflow:hidden;background:#050506;display:grid;place-items:center;touch-action:pan-y;padding:56px 64px 36px}
+.st-bg{position:absolute;inset:-40px;background-size:cover;background-position:center;filter:blur(46px) brightness(.55) saturate(1.2);transform:scale(1.1)}
+/* Upgraded large study image filling the stage area */
+.st-img{
+  position:relative;
+  width:min(86%, 780px);
+  height:min(80vh, 680px);
+  max-width:calc(100% - 110px);
+  max-height:calc(100% - 90px);
+  object-fit:contain;
+  background:#f4f4f5;
+  padding:24px;
+  border-radius:26px;
+  box-shadow:0 30px 90px rgba(0,0,0,.55);
+  cursor:zoom-in;
+  transition:opacity .3s,transform .3s var(--ease);
+}
+.st-img.swap{opacity:0;transform:scale(.97)}
+.st-typo{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:80px;font:400 clamp(3rem,9vw,7.5rem)/1.05 var(--serif);color:#f3efe8;background:linear-gradient(155deg,hsl(var(--h,40) 22% 19%),hsl(var(--h,40) 22% 8%));overflow-wrap:anywhere}
+.st-stage.noimg .st-typo{display:grid}
+.st-stage.noimg .st-img,.st-stage.noimg .st-bg,.st-stage.noimg .st-zoom{display:none}
+.study.guess:not(.revealed) .st-typo{filter:blur(26px)}
+.st-top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;gap:12px;align-items:center;padding:16px 18px;color:#f3efe8;background:linear-gradient(to bottom,rgba(0,0,0,.6),transparent)}
+.st-top .ibtn{background:rgba(10,10,12,.55);border-color:rgba(255,255,255,.16);color:#f3efe8;backdrop-filter:blur(8px)}
+.st-crumb{font:700 .74rem var(--sans);letter-spacing:.08em;text-transform:uppercase;opacity:.88;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st-count{margin-left:auto;font:700 .78rem var(--sans);letter-spacing:.06em;white-space:nowrap}
+.st-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:56px;height:56px;border-radius:50%;background:rgba(10,10,12,.55);border:1px solid rgba(255,255,255,.22);color:#f3efe8;display:grid;place-items:center;backdrop-filter:blur(8px);transition:background .2s,transform .2s var(--ease)}
+.st-arrow:hover{background:rgba(10,10,12,.85);transform:translateY(-50%) scale(1.06)}
+.st-arrow.prev{left:20px}.st-arrow.next{right:20px}
+.st-zoom{position:absolute;right:18px;bottom:16px;z-index:5;font:700 .7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#f3efe8;background:rgba(10,10,12,.55);border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:8px 14px;backdrop-filter:blur(8px)}
+.st-panel{display:flex;flex-direction:column;border-left:1px solid var(--line);background:var(--panel);min-height:0}
+.st-scroll{flex:1;overflow-y:auto;padding:28px clamp(22px,2.6vw,38px) 18px;min-height:0}
+.st-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.st-wordrow{display:flex;align-items:center;gap:10px;margin:16px 0 6px;flex-wrap:wrap}
+.st-word{font:600 clamp(2.1rem,4.1vw,3.5rem)/1.08 'Noto Sans',var(--serif);letter-spacing:-.015em;overflow-wrap:anywhere;transition:filter .3s;color:var(--text)}
+.st-en-sub{display:flex;align-items:center;gap:10px;margin:4px 0 8px;flex-wrap:wrap}
+.st-en-word{font:700 clamp(1.25rem,2.1vw,1.65rem)/1.2 'Noto Sans',var(--sans);color:var(--wcb)}
+.audio{flex:0 0 auto;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line2);display:inline-flex;align-items:center;gap:6px;font:700 .72rem var(--sans);color:var(--gold);transition:background .2s,color .2s}
+.audio:hover,.audio.speaking{background:var(--gold);color:var(--gold-ink)}
+.st-details{transition:filter .3s,opacity .3s}
+.study.guess:not(.revealed) .st-word,.study.guess:not(.revealed) .st-en-sub,.study.guess:not(.revealed) .st-details{filter:blur(14px);user-select:none}
+.lbl{font:700 .64rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin:20px 0 8px}
+.st-def-en{font:700 1.14rem/1.45 'Noto Sans',var(--sans);color:var(--wcb);margin-bottom:4px}
+.st-def{font:500 1.02rem/1.6 var(--sans);color:var(--text)}
+.st-ex{display:flex;flex-direction:column;gap:10px}
+.st-ex q{quotes:none;display:block;font:400 1.15rem/1.45 var(--serif);color:var(--sub);padding-left:14px;border-left:2px solid var(--line2)}
+.st-ex q strong{color:var(--gold);font-weight:600}
+.st-link{display:inline-flex;gap:6px;margin-top:22px;font:700 .74rem var(--sans);color:var(--sub)}
+.st-link:hover{color:var(--gold)}
+.reveal{display:none;margin:20px 0 0;width:100%;justify-content:center}
+.study.guess:not(.revealed) .reveal{display:inline-flex}
+.st-foot{border-top:1px solid var(--line);padding:14px clamp(18px,2.2vw,30px) calc(14px + env(safe-area-inset-bottom))}
+.st-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.st-tools .ibtn{height:34px;font-size:.72rem;padding:0 11px}
+.st-dock{display:flex;align-items:center;gap:14px}
+.st-dock .btn{height:42px;padding:0 16px}
+.st-prog{flex:1;text-align:center;font:700 .72rem var(--sans);color:var(--mute);letter-spacing:.06em}
+.st-prog div{height:3px;border-radius:9px;background:var(--line2);margin-top:8px;overflow:hidden}
+.st-prog i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.92);display:none;place-items:center;cursor:zoom-out;padding:30px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:92vw;max-height:90vh;width:min(92vw,860px);height:min(88vh,760px);object-fit:contain;background:#f4f4f5;padding:24px;border-radius:24px}
+.lightbox button{position:absolute;top:16px;right:20px;font-size:34px;color:#fff;line-height:1}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);z-index:90;background:var(--text);color:var(--bg);font:700 .78rem var(--sans);padding:10px 18px;border-radius:99px;opacity:0;transition:.3s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.view{min-height:60vh;animation:fade .45s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ---------- LanGeek-style word cards (Vietnamese -> English) ---------- */
+.grid.cards{grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--card)),1fr));gap:20px;padding:24px var(--pad) 36px;align-items:stretch}
+.wc{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 16px rgba(16,24,40,.06);padding:24px 20px 20px;font-family:'Noto Sans',var(--sans);transition:box-shadow .25s,transform .25s var(--ease),border-color .2s;min-width:0}
+[data-theme="dark"] .wc{box-shadow:none}
+.wc:hover{box-shadow:0 10px 34px rgba(16,24,40,.12);transform:translateY(-2px)}
+[data-theme="dark"] .wc:hover{border-color:var(--line2);box-shadow:0 10px 34px rgba(0,0,0,.4)}
+.wc-img{position:relative;display:grid;place-items:center;height:190px;margin-bottom:20px;background:var(--panel2);border-radius:18px;padding:10px}
+.wc-img img{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);object-fit:contain;border-radius:14px;opacity:0;transition:opacity .4s}
+.wc-img img.in{opacity:1}
+.wc-img .ph{position:absolute;width:min(72%,200px);height:128px;border-radius:20px;background:var(--panel2);display:grid;place-items:center;font:400 3.4rem/1 var(--serif);color:var(--mute);opacity:.8}
+.wc-img img.in + .ph{display:none}
+.wc-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.wc-w{font:700 17px/1.3 'Noto Sans',var(--sans);color:var(--wcb);overflow-wrap:anywhere}
+.wc-w:hover{text-decoration:underline;text-underline-offset:3px}
+.wc-en-badge{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:99px;background:color-mix(in srgb,var(--gold) 14%,transparent);color:var(--gold);font:700 11.5px/1.3 'Noto Sans',var(--sans)}
+.wc-p{font:700 11px 'Noto Sans',var(--sans);color:var(--wcp)}
+.wc-d{margin:10px 0 14px;font:400 13.5px/1.55 'Noto Sans',var(--sans);color:var(--text)}
+.wc-d strong.en-lead{color:var(--wcb);font-weight:700}
+.wc-ex{background:var(--wcx);border-radius:10px;padding:9px 12px 11px;font:400 12px/1.5 'Noto Sans',var(--sans);color:var(--sub)}
+.wc-ex b:first-child{color:var(--text);font-weight:700}
+.wc-ex strong{color:var(--text);font-weight:700}
+.wc-act{display:flex;gap:8px;margin-top:auto;padding-top:16px;align-items:center}
+.wc-b{height:37px;min-width:37px;padding:0 10px;border-radius:12px;background:var(--panel2);color:var(--sub);display:inline-flex;align-items:center;justify-content:center;gap:4px;font:700 .7rem var(--sans);transition:background .2s,color .2s,transform .2s var(--ease)}
+.wc-b:hover{background:color-mix(in srgb,var(--gold) 16%,var(--panel2));color:var(--gold);transform:translateY(-1px)}
+.wc-b.on{background:var(--gold);color:var(--gold-ink)}
+.wc.is-done{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.wc.is-done .wc-w::after{content:" ✓";color:var(--gold)}
+
+/* ---------- compare tray ---------- */
+.tray{position:fixed;left:50%;bottom:18px;transform:translate(-50%,150%);z-index:55;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 20px);background:var(--panel);border:1px solid var(--line2);box-shadow:0 20px 60px rgba(0,0,0,.25);border-radius:22px;padding:10px 12px 10px 14px;transition:transform .4s var(--ease)}
+.tray.show{transform:translate(-50%,0)}
+.tr-items{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.tr-it{position:relative;display:flex;align-items:center;gap:8px;padding:4px 28px 4px 4px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);white-space:nowrap}
+.tr-th{position:relative;width:34px;height:34px;border-radius:9px;overflow:hidden;display:grid;place-items:center;background:var(--bg);font:700 .8rem var(--sans);color:var(--mute);flex:0 0 auto}
+.tr-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tr-it em{font:600 .78rem 'Noto Sans',var(--sans);font-style:normal}
+.tr-it button{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;font-size:15px;line-height:1;color:var(--mute)}
+.tr-it button:hover{color:var(--text);background:var(--line)}
+.tr-hint{font:600 .72rem var(--sans);color:var(--mute);white-space:nowrap}
+.btn.dis{opacity:.45;pointer-events:none}
+.badge{position:absolute;top:-4px;right:-4px;min-width:17px;height:17px;border-radius:99px;background:var(--gold);color:var(--gold-ink);font:800 .62rem/17px var(--sans);text-align:center;padding:0 4px}
+.ibtn.rel{position:relative}
+
+/* ---------- compare page ---------- */
+.cmp-ins{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;margin:0;border-bottom:1px solid var(--line)}
+.cmp-ins>div{padding:18px var(--pad);background:var(--panel2)}
+.cmp-ins small{display:block;font:700 .62rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.chips2{display:flex;flex-wrap:wrap;gap:6px}
+.chips2 span{font:600 .78rem 'Noto Sans',var(--sans);padding:4px 10px;border-radius:99px;background:var(--panel);border:1px solid var(--line2)}
+.chips2 span.d{background:color-mix(in srgb,var(--gold) 18%,transparent);border-color:color-mix(in srgb,var(--gold) 50%,transparent)}
+.cmp-scroll{overflow-x:auto;padding:0 0 14px}
+.cmp{display:grid;grid-template-columns:150px repeat(var(--n),minmax(240px,1fr));min-width:calc(150px + var(--n) * 250px);font-family:'Noto Sans',var(--sans)}
+.cr{display:contents}
+.cl,.cc{border-bottom:1px solid var(--line);padding:18px 20px;font-size:.88rem;line-height:1.55}
+.cc{border-left:1px solid var(--line);min-width:0}
+.cl{position:sticky;left:0;z-index:2;background:var(--bg);padding-left:var(--pad);font:700 .64rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.cl .tagx{font:700 .58rem var(--sans);letter-spacing:.08em;padding:2px 7px;border-radius:99px;border:1px solid var(--line2);color:var(--sub)}
+.cl .tagx.diff{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 55%,transparent)}
+.cc.head{text-align:center;position:relative;padding-top:26px;padding-bottom:22px}
+.cc.head .ci{height:160px;display:grid;place-items:center;position:relative;margin-bottom:14px}
+.cc.head .ci img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:18px;opacity:0;transition:opacity .4s}
+.cc.head .ci img.in{opacity:1}
+.cc.head .ci .ph{position:absolute;width:62%;height:112px;border-radius:20px;background:var(--panel2);display:grid;place-items:center;font:400 3rem/1 var(--serif);color:var(--mute)}
+.cc.head .ci img.in + .ph{display:none}
+.cc.head .cw{font:700 1.15rem 'Noto Sans',var(--sans);color:var(--wcb)}
+.cc.head .cw:hover{text-decoration:underline}
+.cc.head .cp{font:700 .72rem 'Noto Sans',var(--sans);color:var(--wcp);margin-left:6px}
+.cc.head .x{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:var(--panel2);color:var(--sub);font-size:16px;line-height:1}
+.cc.head .x:hover{background:var(--line2);color:var(--text)}
+.cc.head .say{margin:8px 4px 0;display:inline-flex;align-items:center;gap:6px;font:700 .72rem var(--sans);color:var(--gold);padding:5px 12px;border-radius:99px;border:1px solid var(--line2)}
+.cc.head .say:hover{background:var(--gold);color:var(--gold-ink)}
+.cc q{quotes:none;display:block;background:var(--wcx);border-radius:10px;padding:8px 12px;font-size:.8rem;color:var(--sub);margin-bottom:8px}
+.cc q strong{color:var(--text)}
+.sh{border-bottom:2px solid var(--line2)}
+mark.df{background:color-mix(in srgb,var(--gold) 22%,transparent);color:inherit;border-radius:4px;padding:0 3px;font-weight:600}
+.cmp-note{padding:14px var(--pad);font:500 .76rem var(--sans);color:var(--mute);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+@media (max-width:700px){.cmp{grid-template-columns:104px repeat(var(--n),minmax(220px,1fr));min-width:calc(104px + var(--n) * 230px)}.cl{padding-left:14px}.tray{bottom:10px}.tr-hint{display:none}}
+
+/* ---------- Reference-style thumbnail cards (topics + compact words) ---------- */
+.tgrid{--m:.74;grid-template-columns:repeat(auto-fill,minmax(min(100%,calc(var(--card) * var(--m))),1fr));gap:18px;padding:0 var(--pad) 30px}
+.tgrid.compact{--m:.58;gap:16px;padding-top:24px}
+.tgrid>.band{padding:22px 0 6px;margin-top:14px}
+.tc{position:relative;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 2px 14px rgba(16,24,40,.05);padding:16px;font-family:'Noto Sans',var(--sans);transition:box-shadow .25s,transform .25s var(--ease),border-color .2s;min-width:0;overflow:hidden}
+[data-theme="dark"] .tc{box-shadow:none}
+.tc:hover{box-shadow:0 10px 30px rgba(16,24,40,.12);transform:translateY(-2px)}
+[data-theme="dark"] .tc:hover{border-color:var(--line2);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.tc-img{position:relative;display:grid;place-items:center;height:clamp(124px,12vw,164px);margin-bottom:14px;background:var(--panel2);border-radius:14px;padding:8px}
+.tc-img img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain;border-radius:12px;opacity:0;transition:opacity .4s}
+.tc-img img.in{opacity:1}
+.tc-img .ph{position:absolute;inset:4% 10%;border-radius:16px;background:var(--panel2);display:grid;place-items:center;font:400 2.6rem/1 var(--serif);color:var(--mute)}
+.tc-img img.in + .ph{display:none}
+.tc-h{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.tc-w{font:700 15px/1.3 'Noto Sans',var(--sans);color:var(--wcb);overflow-wrap:anywhere}
+.tc-p{font:700 10.5px 'Noto Sans',var(--sans);color:var(--wcp)}
+.tc-d{margin-top:5px;font:500 12.5px/1.4 'Noto Sans',var(--sans);color:var(--sub)}
+.tc-bar{position:absolute;left:0;bottom:0;height:3px;background:var(--gold)}
+.tc.is-done{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.tc.is-done .tc-w::after{content:" ✓";color:var(--gold)}
+@media (max-width:700px){.tgrid{--m:.5;gap:12px}.tgrid.compact{gap:10px}.tc{padding:12px;border-radius:16px}}
+
+/* ---------- Responsive ---------- */
+[data-dens="s"]{--tile:140px;--card:262px}
+[data-dens="m"]{--tile:190px;--card:330px}
+[data-dens="l"]{--tile:280px;--card:430px}
+@media (max-width:900px){
+  .study{grid-template-columns:1fr;grid-template-rows:minmax(300px,48vh) minmax(0,1fr)}
+  .st-stage{padding:48px 16px 16px}
+  .st-img{width:calc(100% - 32px);height:calc(100% - 76px);max-width:calc(100% - 32px);max-height:calc(100% - 76px);padding:14px;border-radius:20px}
+  .st-arrow{width:44px;height:44px}.st-arrow.prev{left:10px}.st-arrow.next{right:10px}
+  .st-panel{border-left:0;border-top:1px solid var(--line)}
+  .st-scroll{padding-top:18px}
+  .st-word{font-size:clamp(1.85rem,7.5vw,2.7rem)}
+  .st-typo{padding:40px;font-size:clamp(2.4rem,11vw,4.5rem)}
+}
+@media (max-width:700px){
+  :root{--tile:158px}[data-dens="m"]{--card:320px}
+  [data-dens="s"]{--tile:108px;--card:220px}[data-dens="l"]{--tile:340px;--card:320px}
+  .hdr-row{gap:10px}
+  .brand-name{display:none}
+  .search{flex:1 1 0;min-width:0;max-width:none;margin-left:0}
+  .search kbd{display:none}
+  .dens{display:none}
+  .nextprev{grid-template-columns:1fr}
+  .np.next{text-align:left;align-items:flex-start}
+  .st-arrow{display:none}
+  .st-tools .ibtn span.t{display:none}
+}
+@media (min-width:1500px){[data-dens="m"]{--tile:210px}[data-dens="l"]{--tile:320px}}
+@media (min-width:2200px){[data-dens="m"]{--tile:250px}[data-dens="s"]{--tile:170px}[data-dens="l"]{--tile:380px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body data-dens="m">
+
+<header class="hdr" id="hdr">
+  <div class="hdr-row">
+    <a class="brand" href="#/" aria-label="Từ vựng Hình ảnh — Trang chủ">
+      <span class="brand-mark">VN</span>
+      <span class="brand-name">Từ vựng <em>Hình ảnh</em></span>
+    </a>
+    <label class="search">
+      <span class="sr">Tìm kiếm từ vựng Tiếng Việt hoặc Tiếng Anh</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Tìm từ Tiếng Việt hoặc Tiếng Anh (VD: người đàn ông, man, con mèo)…" autocomplete="off" spellcheck="false">
+      <kbd>/</kbd>
+    </label>
+    <div class="tools">
+      <div class="dens" role="group" aria-label="Kích thước thẻ">
+        <button data-d="s" title="Thẻ nhỏ">S</button><button data-d="m" title="Thẻ vừa">M</button><button data-d="l" title="Thẻ lớn">L</button>
+      </div>
+      <a class="ibtn rel" id="btnCmp" href="#/compare" title="So sánh từ" aria-label="So sánh từ"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7.5" height="16" rx="2"/><rect x="13.5" y="4" width="7.5" height="16" rx="2"/></svg><span class="badge" id="cmpN" hidden></span></a>
+      <button class="ibtn" id="btnTheme" title="Đổi giao diện Sáng / Tối" aria-label="Đổi giao diện"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+      <button class="ibtn" id="btnFs" title="Toàn màn hình (F)" aria-label="Toàn màn hình"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+  </div>
+  <nav class="chips" id="chips" aria-label="Bộ sưu tập"></nav>
+</header>
+
+<main id="view" class="view"></main>
+
+<div class="study" id="study" role="dialog" aria-modal="true" aria-label="Chế độ học từ vựng">
+  <div class="st-stage" id="stStage">
+    <div class="st-bg" id="stBg"></div>
+    <img class="st-img" id="stImg" alt="">
+    <div class="st-typo" id="stTypo"></div>
+    <div class="st-top">
+      <button class="ibtn" id="stClose" title="Đóng (Esc)">✕ <span class="t">Close</span></button>
+      <span class="st-crumb" id="stCrumb"></span>
+      <span class="st-count" id="stCount"></span>
+    </div>
+    <button class="st-arrow prev" id="stPrev" aria-label="Từ trước"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="st-arrow next" id="stNext" aria-label="Từ tiếp theo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="st-zoom" id="stZoom">Zoom</button>
+  </div>
+  <aside class="st-panel">
+    <div class="st-scroll">
+      <div class="st-meta">
+        <span class="pill" id="stTopic"></span>
+        <span class="pill" id="stPos"></span>
+      </div>
+      <div class="st-wordrow">
+        <h2 class="st-word" id="stWord"></h2>
+      </div>
+      <div class="st-en-sub">
+        <span class="st-en-word" id="stEnWord"></span>
+        <button class="audio" id="stAudioVi" title="Phát âm Tiếng Việt (V)" aria-label="Phát âm Tiếng Việt">🇻🇳 VI</button>
+        <button class="audio" id="stAudio" title="Phát âm Tiếng Anh (P)" aria-label="Phát âm Tiếng Anh">🇬🇧 EN</button>
+      </div>
+      <div class="st-details" id="stDetails">
+        <div class="lbl">Meaning (Nghĩa Tiếng Anh)</div>
+        <div class="st-def-en" id="stDefEn"></div>
+        <p class="st-def" id="stDef"></p>
+        <div id="stExWrap">
+          <div class="lbl">In a sentence (Ví dụ câu Tiếng Anh)</div>
+          <div class="st-ex" id="stEx"></div>
+        </div>
+        <a class="st-link" id="stSrc" target="_blank" rel="noopener noreferrer">Open lesson on LanGeek ↗</a>
+      </div>
+      <button class="btn pri reveal" id="stReveal">Hiện đáp án (Reveal) <span style="opacity:.6">· Space</span></button>
+    </div>
+    <div class="st-foot">
+      <div class="st-tools">
+        <button class="ibtn" id="stCmp" title="Thêm vào so sánh">⚖ <span class="t">Compare</span></button>
+        <button class="ibtn" id="stLearn" title="Đánh dấu đã thuộc (K)">✓ <span class="t">Learned</span></button>
+        <button class="ibtn" id="stGuess" title="Chế độ đoán từ (G)">🎯 <span class="t">Guess</span></button>
+        <button class="ibtn" id="stPlay" title="Tự động chạy (C)">▶ <span class="t">Autoplay</span></button>
+        <button class="ibtn" id="stShuf" title="Trộn thẻ (S)">🔀 <span class="t">Shuffle</span></button>
+      </div>
+      <div class="st-dock">
+        <button class="btn" id="stPrev2">← Prev</button>
+        <div class="st-prog"><span id="stProgTxt"></span><div><i id="stProgBar"></i></div></div>
+        <button class="btn pri" id="stNext2">Next →</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="tray" id="tray" role="region" aria-label="Từ đang so sánh"></div>
+<div class="lightbox" id="lb"><button aria-label="Đóng">×</button><img alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ====================== VIETNAMESE -> ENGLISH DATASET ====================== */
+const DATA = {
+  cols: [
+    {
+      id: "pic",
+      name: "Từ điển Hình ảnh (Picture Dictionary)",
+      short: "Pictures",
+      tag: "Chủ đề hàng ngày · Tiếng Việt → Tiếng Anh",
+      ac: "#c8a96b",
+      topics: [
+        {
+          id: 5336,
+          t: "Động vật (Animals)",
+          enT: "Animals",
+          p: "46019/original/animals?type=png",
+          n: "Chủ đề 1",
+          w: [
+            ["con chim", "bird", "noun", "an animal with a beak, wings, and feathers that is usually capable of flying", "50098/thumb/bird?type=jpeg", ["I saw a bird pecking at the ground searching for food.", "The bird built a cozy nest in the tree to lay its eggs.", "The bird had bright feathers and a long beak."]],
+            ["con cá", "fish", "noun", "an animal with a tail, gills and fins that lives in water", "27339/thumb/fish?type=jpeg", ["My dad took me fishing, and we caught a big fish.", "My uncle and I went snorkeling and saw beautiful tropical fish underwater.", "The colorful fish in the aquarium captured my attention."]],
+            ["côn trùng", "insect", "noun", "a small arthropod with six legs and a body divided into three parts, often also having wings", "50080/thumb/insect?type=jpeg", ["Bees and ants are insects.", "A large insect landed on the window.", "Most insects have six legs."]],
+            ["con chó", "dog", "noun", "an animal with a tail and four legs that we keep as a pet and is famous for its sense of loyalty", "50082/thumb/dog?type=jpeg", ["I found a lost dog and helped it find its owner.", "I like to give my dog belly rubs, it makes him so happy.", "My neighbor has a big black dog named Max."]],
+            ["con mèo", "cat", "noun", "a small animal that has soft fur, a tail, and four legs and we often keep it as a pet", "50132/thumb/cat?type=jpeg", ["I heard a cat meowing outside my window.", "My cat jumped onto the kitchen counter.", "My friend's cat is playing with a toy mouse."]],
+            ["con ngựa", "horse", "noun", "an animal that is large, has a tail and four legs, and we use for racing, pulling carriages, riding, etc.", "50136/thumb/horse?type=jpeg", ["A beautiful white horse grazed peacefully in the meadow.", "I watched a horse race at the track and cheered for my favorite.", "My dream is to one day own a beautiful horse."]],
+            ["con voi", "elephant", "noun", "an animal that is very large, has thick gray skin, four legs, a very long nose that is called a trunk, and mostly lives in Asia and Africa", "50138/thumb/elephant?type=jpeg", ["Elephants are known for their intelligence and remarkable memory.", "People from all over the world come to see the majestic elephants at the wildlife sanctuary.", "The baby elephant clumsily followed its mother, learning to navigate the world."]],
+            ["sư tử", "lion", "noun", "a powerful and large animal that is from the cat family and mostly found in Africa, with the male having a large mane", "48613/thumb/lion?type=jpeg", ["I saw a lion hunting for prey in the tall grass.", "The lion's powerful jaws allowed it to tear apart its prey.", "The lion's roar can be heard from miles away, establishing its dominance."]],
+            ["con hổ", "tiger", "noun", "a type of large and wild animal that is from the cat family, has orange fur and black stripes, and is mostly found in Asia", "50273/thumb/tiger?type=jpeg", ["John learned that tigers are excellent swimmers.", "Mark was amazed to see a tiger at the zoo.", "The tiger is a majestic and powerful wild animal."]],
+            ["con gấu", "bear", "noun", "a large animal with sharp claws and thick fur, which eats meat, honey, insects, and fruits", "27195/thumb/bear?type=jpeg", ["A bear has a thick fur coat to keep warm in cold weather.", "I was really scared when I encountered a bear in the wilderness.", "The bear is a symbol of strength and courage in many cultures."]],
+            ["con thỏ", "rabbit", "noun", "an animal that is small, eats plants, has a short tail, long ears, and soft fur", "50144/thumb/rabbit?type=jpeg", ["I gave a carrot to the hungry rabbit.", "I saw a fluffy white rabbit in our garden.", "Rabbits are known for their ability to hop and jump."]],
+            ["con hươu / nai", "deer", "noun", "a large, wild animal with long legs which eats grass and can run very fast, typically the males have horns", "50166/thumb/deer?type=jpeg", ["Driving through the national park, we were lucky enough to witness a herd of majestic deer.", "In the early morning, I saw a group of deer prancing through the fields.", "The deer cautiously approached the watering hole to quench its thirst."]],
+            ["chuột túi", "kangaroo", "noun", "a large Australian animal with a long tail and two strong legs that moves by leaping", "17987/thumb/kangaroo?type=jpeg", ["The kangaroo bounded effortlessly across the Australian outback.", "Tourists were thrilled to spot kangaroos grazing in the grasslands."]],
+            ["hươu cao cổ", "giraffe", "noun", "a tall animal with a very long neck and long legs that has brown spots on its yellow fur", "50168/thumb/giraffe?type=jpeg", ["The giraffe gracefully stretched its long neck to reach the tender leaves at the top of the tree.", "Tourists marveled at the sight of a herd of giraffes roaming the vast grasslands."]],
+            ["con cáo", "fox", "noun", "a small to medium-sized carnivorous mammal with a pointed muzzle and bushy tail", "50078/thumb/fox?type=jpeg", ["Jane read a storybook about a curious fox and its adventures.", "Sarah learned that foxes are clever and resourceful animals."]],
+            ["con sóc", "squirrel", "noun", "a furry animal with a thick tail that lives in trees and feeds on nuts and seeds", "50233/thumb/squirrel?type=jpeg", ["During winter, squirrels rely on their stored food reserves to survive.", "The agile squirrel leaped from branch to branch."]],
+            ["cá sấu", "crocodile", "noun", "a large reptile with very big jaws, sharp teeth, short legs, and a hard skin and long tail", "50174/thumb/crocodile?type=jpeg", ["I didn't know that crocodiles are excellent swimmers.", "Mark saw a crocodile basking in the sun near the riverbank."]],
+            ["khỉ đột", "gorilla", "noun", "an African ape which has a large head and short neck that looks like a monkey with no tail", "50203/thumb/gorilla?type=jpeg", ["The gorilla sat calmly, observing its surroundings with a wise expression in its eyes."]],
+            ["gấu túi", "koala", "noun", "a tree-dwelling Australian mammal with gray fur and large ears that feeds on eucalyptus leaves", "50205/thumb?type=jpeg", ["The koala spends most of its time sleeping in eucalyptus trees."]],
+            ["con cừu", "sheep", "noun", "a farm animal that we keep to use its meat or wool", "50184/thumb/sheep?type=jpeg", ["A curious sheep approached me and sniffed my hand.", "I saw a group of sheep being herded by a shepherd and his dog."]],
+            ["con lợn / heo", "pig", "noun", "a farm animal that has short legs, a curly tail, and a fat body, typically raised for its meat", "50170/thumb/pig?type=jpeg", ["I watched as the pig rooted around in the dirt for food.", "The pig greeted me with curiosity and approached the fence."]],
+            ["con rắn", "snake", "noun", "a long, legless reptile with a narrow body covered in scales", "48311/thumb/snake?type=jpeg", ["Sarah saw a snake moving through the grass.", "The snake disappeared beneath a large rock."]],
+            ["con rùa", "turtle", "noun", "an animal that has a hard shell around its body and lives mainly in water", "18169/thumb/turtle?type=jpeg", ["The turtle basked lazily on a sun-warmed rock, its shell gleaming in the sunlight."]],
+            ["con ếch", "frog", "noun", "a small green animal with smooth skin, long legs for jumping and no tail, that lives both in water and on land", "50140/thumb/frog?type=jpeg", ["The frog jumped from one lily pad to another.", "She saw a frog near the pond while walking through the park."]],
+            ["gấu trúc", "panda", "noun", "a large mammal that looks like a bear with black and white fur and eats bamboos, usually found in China", "24164/thumb?type=jpeg", ["The panda spent most of the day eating bamboo in the forest."]],
+            ["lạc đà", "camel", "noun", "a large desert animal with a long neck and one or two humps on its back", "29216/thumb/camel?type=jpeg", ["In the desert, camels are often used as a means of transportation."]],
+            ["con bò", "cow", "noun", "an adult female of domestic cattle, especially one kept for milk or breeding", "50134/thumb/cow?type=jpeg", ["The cow was grazing in the field.", "Emma watched the farmer milk the cows."]],
+            ["chó sói", "wolf", "noun", "a large wild animal of the dog family that typically lives and hunts in packs", "17917/thumb/wolf?type=jpeg", ["A wolf appeared at the edge of the forest.", "Emily heard a wolf howling in the distance."]],
+            ["con khỉ", "monkey", "noun", "a playful and intelligent animal that has a long tail and usually lives in trees and warm countries", "50180/thumb/monkey?type=jpeg", ["I saw the monkey hanging upside down from a tree branch.", "My sister showed me the monkey eating a banana with delight."]],
+            ["con chuột", "mouse", "noun", "a small animal that lives in fields or houses, and often has fur and a long thin tail", "29220/thumb/mouse?type=jpeg", ["I gave some cheese to the hungry mouse.", "I heard the tiny squeak of a mouse in the walls."]],
+            ["gấu Bắc Cực", "polar bear", "noun", "a large white bear which lives in the North Pole and is well-adapted to its icy environment", "50225/thumb/polar-bear?type=jpeg", ["The polar bear's white fur helps it blend into its icy surroundings."]],
+            ["con dê", "goat", "noun", "an animal with horns and a coat of hair that lives wild in the mountains or is kept on farms", "50217/thumb/goat?type=jpeg", ["The goat climbed to the top of the rocky hill.", "Many farmers raise goats for their milk."]]
+          ]
+        },
+        {
+          id: 5337,
+          t: "Chim và Côn trùng (Birds & Insects)",
+          enT: "Birds and Insects",
+          p: "46020/original/birds-insects?type=png",
+          n: "Chủ đề 2",
+          w: [
+            ["chim đại bàng", "eagle", "noun", "a large bird of prey with broad wings, a hooked beak, and very keen eyesight", "50215/thumb/eagle?type=jpeg", ["An eagle circled high above the valley.", "The eagle spread its broad wings and took flight."]],
+            ["chim cú mèo", "owl", "noun", "a bird of prey with large forward-facing eyes and a broad face, most species of which hunt at night", "50221/thumb/owl?type=jpeg", ["An owl was perched silently in the old oak tree.", "Emma heard an owl calling outside her window late at night."]],
+            ["chim bồ câu", "pigeon", "noun", "a bird with short legs and a short beak which typically has gray and white feathers", "18023/thumb/pigeon?type=jpeg", ["The pigeon strutted confidently along the sidewalk."]],
+            ["con vẹt", "parrot", "noun", "a tropical bird with bright colors and a curved beak that can be trained to mimic human speech", "50223/thumb?type=jpeg", ["She kept a colorful parrot as a pet in her living room."]],
+            ["con ngỗng", "goose", "noun", "a waterbird with webbed feet, a long neck, and short beak, which is like a large duck", "18019/thumb/goose?type=jpeg", ["The goose waddled gracefully along the edge of the pond."]],
+            ["con vịt", "duck", "noun", "a waterbird with a broad bill, short legs, and webbed feet", "28746/thumb/duck?type=jpeg", ["Emma fed the ducks beside the pond.", "A duck swam across the lake with her young."]],
+            ["chim công", "peacock", "noun", "a male bird with a large shiny colorful tail having eyelike patterns that can be raised for display", "50211/thumb?type=jpeg", ["The peacock proudly displayed its iridescent plumage."]],
+            ["con gà", "chicken", "noun", "a common farm bird kept for its eggs and meat", "48607/thumb/chicken?type=jpeg", ["They keep chickens in a small yard behind the house.", "Emma feeds the chickens every morning."]],
+            ["chim cánh cụt", "penguin", "noun", "a large black-and-white seabird that lives in the Antarctic, and cannot fly", "50267/thumb/penguin?type=jpeg", ["Penguins are birds that cannot fly but are excellent swimmers."]],
+            ["thiên nga", "swan", "noun", "a large waterbird with a long neck, usually having white plumage", "18007/thumb/swan?type=jpeg", ["Sarah watched a swan glide across the lake."]],
+            ["con kiến", "ant", "noun", "a small insect that lives in a colony", "17971/thumb/ant?type=jpeg", ["The industrious ant tirelessly carried bits of food back to its nest."]],
+            ["con ong", "bee", "noun", "a flying insect that feeds on nectar and pollen, often with a hairy body", "39257/thumb/bee?type=jpeg", ["A bee landed on the flower.", "Bees carry pollen from one flower to another."]],
+            ["con bướm", "butterfly", "noun", "a flying insect with a long, thin body and large, typically brightly colored wings", "35824/thumb/butterfly?type=jpeg", ["The butterfly landed on my hand for a brief moment before taking flight again."]],
+            ["con muỗi", "mosquito", "noun", "a flying insect that bites people and animals and feeds on their blood", "50249/thumb/mosquito?type=jpeg", ["I have some red, itchy marks on my arm from mosquito bites."]],
+            ["con nhện", "spider", "noun", "a small creature that spins webs to catch insects for food, with eight legs", "28790/thumb/spider?type=jpeg", ["I learned that spiders help control insect populations in the garden."]]
+          ]
+        },
+        {
+          id: 5338,
+          t: "Cá và Sinh vật biển (Fish)",
+          enT: "Fish",
+          p: "46021/original/fish?type=png",
+          n: "Chủ đề 3",
+          w: [
+            ["cá hồi", "salmon", "noun", "a large silvery fish that typically lives in the sea and migrates into fresh water to reproduce", "50317/thumb/salmon?type=jpeg", ["David caught a large salmon while fishing in Alaska."]],
+            ["cá ngừ", "tuna", "noun", "a type of large fish that is found in warm seas", "50325/thumb/tuna?type=jpeg", ["The sushi restaurant is famous for its fresh tuna."]],
+            ["cá mập", "shark", "noun", "a large sea fish with a pointed fin on its back and very sharp teeth", "50289/thumb/shark?type=jpeg", ["Mark watched a documentary about different species of sharks."]],
+            ["cá vàng", "goldfish", "noun", "a small red or orange fish often kept as a pet", "17983/thumb/goldfish?type=jpeg", ["The goldfish swam gracefully through the crystal-clear water of the aquarium."]],
+            ["cá heo", "dolphin", "noun", "an intelligent marine mammal with a streamlined body, a beaklike snout, and teeth", "29218/thumb/dolphin?type=jpeg", ["Dolphins often swim alongside boats.", "A dolphin jumped out of the water beside the boat."]],
+            ["con sứa", "jellyfish", "noun", "a sea creature that has a bell-shaped body, which is gelatinous and transparent", "25725/thumb?type=jpeg", ["The jellyfish gracefully floated through the water."]],
+            ["bạch tuộc", "octopus", "noun", "a sea creature with eight, long arms and a soft round body with no internal shell", "17991/thumb/octopus?type=jpeg", ["The octopus gracefully glided through the water."]],
+            ["cá ngựa", "seahorse", "noun", "a small marine fish with an upright posture, a horse-like head and a curled tail", "50303/thumb?type=jpeg", ["The seahorse swayed gently with the ocean currents."]],
+            ["cá voi", "whale", "noun", "a large marine mammal with a streamlined body, horizontal tail flukes, and a blowhole", "28884/thumb/whale?type=jpeg", ["We saw a whale surface beside the boat."]],
+            ["hải cẩu", "seal", "noun", "a large sea animal with flippers that eats fish, can live on land and in water", "50319/thumb/seal?type=jpeg", ["The seal lounged lazily on the rocky shore, basking in the warm sunlight."]]
+          ]
+        },
+        {
+          id: 5341,
+          t: "Thức ăn (Food)",
+          enT: "Food",
+          p: "46022/original/food?type=png",
+          n: "Chủ đề 4",
+          w: [
+            ["bánh mì kẹp thịt tròn", "hamburger", "noun", "a sandwich consisting of a cooked patty made from ground beef, served between two buns", "50333/thumb/burger?type=jpeg", ["I ordered a hamburger with extra pickles.", "She prefers her hamburger with cheese and bacon."]],
+            ["mì ống Ý", "pasta", "noun", "a dish that we can make by mixing cooked pasta with other ingredients and sauces", "50357/thumb/pasta?type=jpeg", ["I added chicken and vegetables to my pasta for a balanced meal."]],
+            ["món rau trộn", "salad", "noun", "a cold dish made mainly from raw or cooked vegetables, often mixed with a dressing", "48675/thumb/salad?type=jpeg", ["Sarah made a fresh salad with tomatoes and cucumbers."]],
+            ["bánh mì kẹp", "sandwich", "noun", "a food made by placing a filling between two slices or pieces of bread", "50353/thumb/sandwich?type=jpeg", ["Emma packed a turkey sandwich for lunch."]],
+            ["món súp / canh", "soup", "noun", "a liquid food made by cooking ingredients such as vegetables, meat, or fish in water or stock", "27101/thumb/soup?type=jpeg", ["Emily made a pot of vegetable soup for dinner."]],
+            ["bít tết", "steak", "noun", "a large piece of meat or fish cut into thick slices", "61794/thumb/beef?type=jpeg", ["She seasoned the steak with salt and pepper before grilling it."]],
+            ["bánh pizza", "pizza", "noun", "an Italian food made with thin flat round bread, baked with a topping of tomatoes and cheese", "50355/thumb/pizza?type=jpeg", ["I like to order a cheesy pepperoni pizza for dinner."]],
+            ["khoai tây chiên", "French fries", "noun", "long thin pieces of potato cooked in hot oil", "50359/thumb/french-fries?type=jpeg", ["He loves dipping his French fries in ketchup."]],
+            ["sô-cô-la", "chocolate", "noun", "a sweet food made from processed cacao seeds, usually combined with sugar", "50343/thumb/chocolate?type=jpeg", ["Emma loves dark chocolate.", "Daniel melted some chocolate to make the cake."]],
+            ["kem lạnh", "ice cream", "noun", "a sweet and cold dessert that is made from a mixture of milk, cream, sugar, and flavorings", "27137/thumb/ice-cream?type=jpeg", ["I love eating a scoop of vanilla ice cream on a hot summer day."]],
+            ["bánh quy", "cookie", "noun", "a small, usually flat, sweet baked food made from dough", "27107/thumb/cookie?type=jpeg", ["Emma baked chocolate chip cookies for the party."]],
+            ["bánh ngọt / bánh kem", "cake", "noun", "a sweet food we make by mixing flour, butter, sugar, eggs and baking it in an oven", "27133/thumb/cake?type=jpeg", ["I baked a chocolate cake for my friend's birthday."]],
+            ["bánh mì", "bread", "noun", "a type of food made from flour, water and usually yeast mixed together and baked", "23865/thumb/bread?type=jpeg", ["I toasted a slice of bread and spread peanut butter on it for breakfast."]],
+            ["trứng tráng", "omelet", "noun", "a dish that consists of eggs mixed together and cooked in a frying pan", "50375/thumb/omelet?type=jpeg", ["She made a fluffy omelet for breakfast."]]
+          ]
+        },
+        {
+          id: 5343,
+          t: "Đồ uống (Drinks)",
+          enT: "Drinks",
+          p: "46023/original/drinks?type=png",
+          n: "Chủ đề 5",
+          w: [
+            ["cà phê", "coffee", "noun", "a drink made by mixing hot water with crushed coffee beans, which is usually brown", "50369/thumb/coffee?type=jpeg", ["I start my day with a cup of black coffee to wake me up."]],
+            ["trà", "tea", "noun", "a drink we make by soaking dried tea leaves in hot water", "26992/thumb/tea?type=jpeg", ["She brewed a pot of green tea and poured it over ice."]],
+            ["nước ép trái cây", "juice", "noun", "the liquid naturally contained in fruit or vegetables, or a drink made from it", "50391/thumb/juice?type=jpeg", ["Emma drinks a glass of orange juice with breakfast."]],
+            ["nước ngọt có ga", "soda", "noun", "a sweet fizzy drink that is not alcoholic", "50397/thumb/soda?type=jpeg", ["She ordered a cold soda to quench her thirst."]],
+            ["sữa", "milk", "noun", "the white liquid we get from cows, sheep, or goats that we drink and use for making cheese", "26988/thumb/milk?type=jpeg", ["I poured a glass of cold milk to accompany my freshly baked cookies."]],
+            ["nước chanh", "lemonade", "noun", "a drink made with water, sugar, and lemon juice", "18245/thumb/lemonade?type=jpeg", ["On a hot summer day, nothing beats a tall glass of ice-cold lemonade."]],
+            ["sinh tố", "smoothie", "noun", "a thick smooth drink made with crushed fruit, ice cream, yogurt, or milk", "18249/thumb/smoothie?type=jpeg", ["The café offers a variety of refreshing smoothies."]],
+            ["sô-cô-la nóng", "hot chocolate", "noun", "a hot drink, made by mixing cocoa powder with water or milk", "62876/thumb/hot-chocolate?type=jpeg", ["The ski lodge served delicious hot chocolate to all the guests."]],
+            ["bia", "beer", "noun", "a drink that is alcoholic and made from different types of grain", "18339/thumb/beer?type=jpeg", ["During the barbecue, everyone enjoyed a cold and refreshing beer."]],
+            ["rượu vang", "wine", "noun", "a drink that is alcoholic and mostly made from grape juice", "18365/thumb/wine?type=jpeg", ["During the celebration, they enjoyed a glass of red wine."]],
+            ["nước khoáng", "mineral water", "noun", "water from underground that contains minerals and gasses, usually bottled and sold", "50415/thumb/mineral-water?type=jpeg", ["He ordered a bottle of sparkling mineral water to accompany his meal."]]
+          ]
+        },
+        {
+          id: 5344,
+          t: "Trái cây (Fruits)",
+          enT: "Fruits",
+          p: "46024/original/fruits?type=png",
+          n: "Chủ đề 6",
+          w: [
+            ["quả táo", "apple", "noun", "a fruit that is round and has thin yellow, red, or green skin", "48867/thumb/apple?type=jpeg", ["I ate a delicious apple for a healthy snack.", "I placed the shiny red apple in the basket."]],
+            ["quả chuối", "banana", "noun", "a soft fruit that is long and curved and has hard yellow skin", "51542/thumb/banana?type=jpeg", ["My mom peeled a ripe banana for me."]],
+            ["quả cam", "orange", "noun", "a round citrus fruit with a thick skin and sweet, juicy flesh divided into segments", "17439/thumb/orange?type=jpeg", ["Emma peeled an orange for breakfast."]],
+            ["dâu tây", "strawberry", "noun", "a soft, red juicy fruit with small seeds on its surface", "31441/thumb/strawberry?type=jpeg", ["I put a strawberry on top of each cupcake for decoration."]],
+            ["quả nho", "grape", "noun", "a purple or green fruit that is round, small, and grows in bunches on a vine", "48691/thumb/grape?type=jpeg", ["I ate a handful of sweet grapes for a refreshing snack."]],
+            ["dưa hấu", "watermelon", "noun", "a large, round, and juicy fruit that is red on the inside and has green stripes on its skin", "39031/thumb/watermelon?type=jpeg", ["The children enjoyed a refreshing slice of watermelon on a hot summer day."]],
+            ["quả dứa / thơm", "pineapple", "noun", "a sweet large and tropical fruit that has brown skin, pointy leaves, and yellow flesh", "38070/thumb/pineapple?type=jpeg", ["I have a craving for a pineapple and coconut milk smoothie."]],
+            ["quả xoài", "mango", "noun", "a sweet yellow fruit with a thin skin that grows in hot areas", "50437/thumb/mango?type=jpeg", ["I like to freeze mango chunks for a cool, refreshing snack."]],
+            ["quả anh đào", "cherry", "noun", "a small and round fruit with mainly red skin and a pit", "38591/thumb/cherry?type=jpeg", ["He used pitted cherries to make a delicious cherry pie for dessert."]],
+            ["quả đào", "peach", "noun", "a soft and juicy fruit that has a pit in the middle and velvety skin", "48693/thumb/peach?type=jpeg", ["I bit into a ripe peach and enjoyed its sweet flesh."]],
+            ["quả lê", "pear", "noun", "a sweet yellow or green bell-shaped fruit with a lot of juice", "35918/thumb/pear?type=jpeg", ["A juicy pear is a refreshing treat on a hot summer day."]],
+            ["quả dừa", "coconut", "noun", "a large fruit with a hard shell and edible white flesh inside containing a milky liquid", "50433/thumb/coconut?type=jpeg", ["She cracked open a coconut to enjoy its refreshing water on a hot day."]],
+            ["quả bơ", "avocado", "noun", "a bell-shaped tropical fruit with bright green flesh, dark skin and a big stony seed", "50447/thumb/avocado?type=jpeg", ["Avocado toast has become a trendy and delicious breakfast option."]],
+            ["quả chanh vàng", "lemon", "noun", "an oval yellow citrus fruit with juicy, sharply sour flesh", "48695/thumb/lemon?type=jpeg", ["Emma squeezed a lemon over the grilled fish."]]
+          ]
+        },
+        {
+          id: 5346,
+          t: "Rau củ (Vegetables)",
+          enT: "Vegetables",
+          p: "46025/original/vegetables?type=png",
+          n: "Chủ đề 7",
+          w: [
+            ["củ cà rốt", "carrot", "noun", "a long orange vegetable that grows beneath the ground and is eaten cooked or raw", "28325/thumb/carrot?type=jpeg", ["Sarah made carrot cake with cream cheese frosting."]],
+            ["củ khoai tây", "potato", "noun", "the starchy edible tuber of a plant, commonly cooked and eaten as a vegetable", "27077/thumb/potato?type=jpeg", ["Emma peeled three potatoes for dinner.", "We roasted the potatoes with garlic and olive oil."]],
+            ["quả cà chua", "tomato", "noun", "a soft, juicy fruit, usually red when ripe, that is eaten raw or cooked as a vegetable", "48627/thumb/tomato?type=jpeg", ["Emma sliced a tomato for her sandwich."]],
+            ["củ hành tây", "onion", "noun", "a round, layered vegetable with a strong smell and flavor", "50485/thumb/onion?type=jpeg", ["She chopped an onion for the soup.", "The onion made my eyes water while I was cutting it."]],
+            ["bông cải xanh", "broccoli", "noun", "a vegetable with a thick stem and clusters of edible flower buds, typically green in color", "50475/thumb/broccoli?type=jpeg", ["Purple broccoli is less common but just as nutritious as green."]],
+            ["dưa chuột / dưa leo", "cucumber", "noun", "a long fruit that has thin green skin and is used a lot in salads", "38409/thumb/cucumber?type=jpeg", ["I added cucumber to my homemade green smoothie for extra hydration."]],
+            ["cà tím", "eggplant", "noun", "a vegetable with dark purple skin, which is eaten cooked", "50451/thumb/eggplant?type=jpeg", ["She roasted slices of eggplant in the oven with olive oil and herbs."]],
+            ["nấm", "mushroom", "noun", "any fungus with a short stem and a round top that we can eat", "50473/thumb/mushroom?type=jpeg", ["I love grilled mushrooms with my steak."]],
+            ["bắp / ngô", "corn", "noun", "a tall cereal plant that produces large ears containing rows of yellow or white kernels", "28706/thumb/corn?type=jpeg", ["The farmer planted corn across several large fields."]],
+            ["rau xà lách", "lettuce", "noun", "a type of vegetable with large green leaves, eaten raw in a salad", "50517/thumb/lettuce?type=jpeg", ["She picked some fresh lettuce from the garden."]],
+            ["củ tỏi", "garlic", "noun", "a type of vegetable having a strong smell and spicy flavor that is used in cooking", "38285/thumb/garlic?type=jpeg", ["She added minced garlic to the pan for extra flavor."]],
+            ["bắp cải", "cabbage", "noun", "a large round vegetable with thick white, green or purple leaves, eaten raw or cooked", "50513/thumb/cabbage?type=jpeg", ["She prepared a delicious coleslaw using fresh cabbage and carrots."]]
+          ]
+        },
+        {
+          id: 5347,
+          t: "Nghề nghiệp (Jobs)",
+          enT: "Jobs",
+          p: "46026/original/jobs?type=png",
+          n: "Chủ đề 8",
+          w: [
+            ["bác sĩ", "doctor", "noun", "someone who has studied medicine and treats sick or injured people", "50501/thumb/doctor?type=jpeg", ["My mom is a doctor, and she helps people when they are sick.", "The doctor asked me about my symptoms and medical history."]],
+            ["giáo viên", "teacher", "noun", "someone who teaches things to people, particularly in a school", "50529/thumb/teacher?type=jpeg", ["My favorite teacher is very patient and always encourages me to do my best."]],
+            ["kỹ sư", "engineer", "noun", "a person who designs, fixes, or builds roads, machines, bridges, etc.", "50527/thumb/engineer?type=jpeg", ["The engineer designs cars and improves their performance."]],
+            ["y tá / điều dưỡng", "nurse", "noun", "someone who has been trained to care for injured or sick people, particularly in a hospital", "48571/thumb/nurse?type=jpeg", ["I thanked the nurse for her compassionate care during my stay in the hospital."]],
+            ["đầu bếp trưởng", "chef", "noun", "a highly trained cook who often cooks for hotels or restaurants", "62345/thumb/chef?type=jpeg", ["The chef prepared a delicious five-course meal for the guests."]],
+            ["họa sĩ / nghệ sĩ", "artist", "noun", "someone who creates drawings, sculptures, paintings, etc. either as their job or hobby", "47406/thumb/master?type=jpeg", ["My sister is an artist who paints beautiful landscapes."]],
+            ["luật sư", "lawyer", "noun", "a person who practices or studies law, advises people about the law or represents them in court", "50575/thumb/lawyer?type=jpeg", ["She hired a lawyer to help her navigate the complex legal issues."]],
+            ["nha sĩ", "dentist", "noun", "someone who is licensed to fix and care for our teeth", "50571/thumb/dentist?type=jpeg", ["The dentist recommended that I brush my teeth twice a day and floss regularly."]],
+            ["lính cứu hỏa", "firefighter", "noun", "someone whose job is to put out fires and save people or animals from dangerous situations", "50503/thumb/firefighter?type=jpeg", ["The firefighter bravely entered the burning building to rescue trapped occupants."]],
+            ["phi công", "pilot", "noun", "someone whose job is to operate an aircraft", "50591/thumb/pilot?type=jpeg", ["A good pilot always ensures the safety of their passengers."]],
+            ["dược sĩ", "pharmacist", "noun", "a healthcare professional whose job is to prepare and sell medications", "50589/thumb/pharmacist?type=jpeg", ["I always consult with the pharmacist before taking new medicine."]],
+            ["thợ máy", "mechanic", "noun", "a person whose job is repairing and maintaining motor vehicles and machinery", "50753/thumb/mechanic?type=jpeg", ["She took her car to the mechanic to fix the engine problem."]],
+            ["kiến trúc sư", "architect", "noun", "a person whose job is to design buildings and often oversee their construction", "50493/thumb/architect?type=jpeg", ["Emma hired an architect to design her new house."]],
+            ["nhà khoa học", "scientist", "noun", "someone whose job or education is about science", "46730/thumb/scientist?type=jpeg", ["As a scientist, he spends a lot of time in the lab."]],
+            ["nhà báo", "journalist", "noun", "someone who prepares news to be broadcast or writes for newspapers, magazines, or news websites", "50573/thumb/reporter?type=jpeg", ["A journalist must always verify the facts before writing a story."]],
+            ["nhạc sĩ / nhạc công", "musician", "noun", "a person who plays, performs, or composes music, especially professionally", "50617/thumb/musician?type=jpeg", ["Emma works as a professional musician in New York."]],
+            ["diễn viên", "actor", "noun", "a person who performs a character in a movie, play, or television program", "60732/thumb/actor?type=jpeg", ["The actor spent months preparing for the role."]],
+            ["nông dân", "farmer", "noun", "someone who has a farm or manages a farm", "50613/thumb/farmer?type=jpeg", ["I bought fresh eggs from the local farmer."]],
+            ["nhiếp ảnh gia", "photographer", "noun", "a person who takes photographs as a job or hobby", "47436/thumb/photographer?type=jpeg", ["The photographer took several portraits of the family."]],
+            ["cảnh sát", "police officer", "noun", "someone whose job is to protect people, catch criminals, and make sure that laws are obeyed", "50625/thumb/policeman?type=jpeg", ["The brave police officer rushed to the scene of the accident to provide assistance."]]
+          ]
+        },
+        {
+          id: 5349,
+          t: "Khuôn mặt và Cơ thể (Face & Body)",
+          enT: "Face and Body",
+          p: "46027/original/face-body?type=png",
+          n: "Chủ đề 9",
+          w: [
+            ["cái đầu", "head", "noun", "the top part of body, where brain and face are located", "48419/thumb/head?type=jpeg", ["A scarf was wrapped around her head to keep her warm."]],
+            ["mái tóc", "hair", "noun", "the thin thread-like things that grow on our head", "60762/thumb/hair?type=jpeg", ["He carefully combed his hair before going out.", "His hair is curly and brown."]],
+            ["đôi mắt", "eye", "noun", "a body part on our face that we use for seeing", "50611/thumb/eye?type=jpeg", ["He closed his eyes and took a deep breath."]],
+            ["đôi tai", "ear", "noun", "each of the two body parts that we use for hearing", "50645/thumb/ear?type=jpeg", ["My sister covered her ears with earmuffs to stay warm in the winter."]],
+            ["cái mũi", "nose", "noun", "the body part that is in the middle of our face and we use to smell and breathe", "50655/thumb/nose?type=jpeg", ["She wore a mask that covered her mouth and nose."]],
+            ["cái miệng", "mouth", "noun", "our body part that we use for eating, speaking, and breathing", "60790/thumb/mouth?type=jpeg", ["He chewed his food with his mouth closed, showing good manners."]],
+            ["cái lưỡi", "tongue", "noun", "the soft movable organ in the mouth used for tasting, eating, and speaking", "50659/thumb/tongue?type=jpeg", ["Daniel burned his tongue on the hot soup."]],
+            ["đôi môi", "lip", "noun", "each of the two soft body parts that surround our mouth", "60772/thumb/lip?type=jpeg", ["She applied lip balm to moisturize her dry lips."]],
+            ["cái cổ", "neck", "noun", "the body part that is connecting the head to the shoulders", "60766/thumb/neck?type=jpeg", ["He wore a scarf to keep his neck warm in the cold weather."]],
+            ["bờ vai", "shoulder", "noun", "each of the two parts of the body between the top of the arms and the neck", "50657/thumb/shoulder?type=jpeg", ["She carried the heavy bags on her shoulders."]],
+            ["cánh tay", "arm", "noun", "one of the two body parts that is connected to the shoulder and ends with fingers", "50635/thumb/arm?type=jpeg", ["She carries the heavy grocery bags with one arm."]],
+            ["bàn tay", "hand", "noun", "the part of our body that is at the end of our arm and we use to grab, move, or feel things", "50683/thumb/hand?type=jpeg", ["He reached out his hand to shake mine.", "I use my hand to write and draw."]],
+            ["ngón tay", "finger", "noun", "each of the long thin parts that are connected to our hands", "50677/thumb/finger?type=jpeg", ["He counted on his fingers to solve the math problem."]],
+            ["cẳng chân", "leg", "noun", "each of the two long body parts that we use when we walk", "50689/thumb/leg?type=jpeg", ["He stretched his legs before going for a run."]],
+            ["bàn chân", "foot", "noun", "the body part that is at the end of our leg and we stand and walk on", "50679/thumb/foot?type=jpeg", ["She kicked the soccer ball with her foot."]],
+            ["trái tim", "heart", "noun", "the body part that pushes the blood to go to all parts of our body", "50713/thumb/heart?type=jpeg", ["She placed her hand over her heart and felt it beat strongly."]],
+            ["cái răng", "tooth", "noun", "one of the things in our mouth that are hard and white and we use to chew and bite food", "48525/thumb/tooth?type=jpeg", ["He felt a sharp pain in his tooth and scheduled a dental appointment."]]
+          ]
+        },
+        {
+          id: 5350,
+          t: "Nội thất (Furniture)",
+          enT: "Furniture",
+          p: "46028/original/furniture?type=png",
+          n: "Chủ đề 10",
+          w: [
+            ["cái bàn", "table", "noun", "furniture with a usually flat surface on top of one or multiple legs", "17397/thumb/table?type=jpeg", ["I cleared the table after dinner and washed the dishes."]],
+            ["tủ đựng đồ", "cabinet", "noun", "a piece of furniture with shelves or drawers for storing or displaying things", "48537/thumb/cabinet?type=jpeg", ["The kitchen cabinet stores all our dishes and glasses."]],
+            ["bàn làm việc", "desk", "noun", "furniture we use for working, writing, reading, etc. that normally has drawers", "17381/thumb/desk?type=jpeg", ["My computer is placed on the desk in the office."]],
+            ["cái ghế", "chair", "noun", "furniture with a back and often four legs that we can use for sitting", "17377/thumb/chair?type=jpeg", ["I sat on the comfortable chair while reading a book."]],
+            ["ghế sô-pha", "sofa", "noun", "a comfortable seat that has a back and two arms and enough space for multiple people", "50751/thumb/sofa?type=jpeg", ["The sofa in the living room is big enough to seat three people."]],
+            ["cái giường", "bed", "noun", "furniture we use to sleep on that normally has a frame and mattress", "50793/thumb/bed?type=jpeg", ["I make my bed every morning to keep it tidy."]],
+            ["rèm cửa", "curtain", "noun", "a hanging piece of cloth or other materials that covers a window", "50747/thumb/curtain?type=jpeg", ["She drew the curtains to block out the sunlight."]],
+            ["tấm gương", "mirror", "noun", "a flat surface made of glass that people can see themselves in", "28335/thumb/mirror?type=jpeg", ["She looked at her reflection in the mirror before leaving the house."]],
+            ["kệ sách", "bookshelf", "noun", "a board connected to a wall or a piece of furniture on which books are kept", "38881/thumb/bookshelf?type=jpeg", ["She organized her collection of novels neatly on the bookshelf."]]
+          ]
+        },
+        {
+          id: 5357,
+          t: "Quần áo (Clothes)",
+          enT: "Clothes",
+          p: "46032/original/clothes?type=png",
+          n: "Chủ đề 11",
+          w: [
+            ["áo sơ mi", "shirt", "noun", "a piece of clothing worn on the upper half of the body, typically with a collar and buttons", "50912/thumb/shirt?type=jpeg", ["I need to iron my shirt before wearing it."]],
+            ["áo thun / phông", "T-shirt", "noun", "a casual short-sleeved shirt with no collar, usually made of cotton", "48593/thumb/t-shirt?type=jpeg", ["My dad gave me his old T-shirt, and now it's my favorite."]],
+            ["cái mũ / nón", "hat", "noun", "a piece of clothing often with a brim that we wear on our heads", "50910/thumb/hat?type=jpeg", ["She bought a new hat to add a stylish accessory to her outfit."]],
+            ["khăn quàng cổ", "scarf", "noun", "a piece of cloth, often worn around the neck or head for warmth", "28980/thumb/scarf?type=jpeg", ["She wrapped a cozy scarf around her neck."]],
+            ["găng tay", "glove", "noun", "a covering for the hand and wrist with separate sections for the thumb and fingers", "28391/thumb/glove?type=jpeg", ["Sarah put on a pair of gloves before going outside."]],
+            ["bộ com-lê / vest", "suit", "noun", "a jacket with a pair of pants or a skirt that are made from the same cloth", "48603/thumb/suit?type=jpeg", ["My dad bought a stylish suit for his friend's wedding."]],
+            ["quần dài", "pants", "noun", "a piece of clothing covering the body from the waist downward", "50966/thumb/pants?type=jpeg", ["Michael bought a new pair of pants for work."]],
+            ["quần bò / jean", "jeans", "noun", "pants made of denim, typically worn as casual clothing", "48565/thumb/jeans?type=jpeg", ["Emma wore jeans and a white T-shirt to the picnic."]],
+            ["chân váy", "skirt", "noun", "a piece of clothing that hangs from the waist and covers part or all of the legs", "50972/thumb/skirt?type=jpeg", ["She wore a long black skirt to the dinner."]],
+            ["váy liền / đầm", "dress", "noun", "a piece of clothing worn by girls and women that is made in one piece", "50958/thumb/dress?type=jpeg", ["I want to buy a new dress for the wedding."]],
+            ["áo khoác", "jacket", "noun", "a short item of clothing that we wear on the top part of our body", "48563/thumb/jacket?type=jpeg", ["She wore a puffy jacket that kept her warm in the snow."]],
+            ["đôi giày", "shoe", "noun", "something that we wear to cover and protect our feet", "48583/thumb/shoe?type=jpeg", ["He polished his leather shoes to make them look shiny."]]
+          ]
+        },
+        {
+          id: 5366,
+          t: "Giao thông (Transportation)",
+          enT: "Transportation",
+          p: "46035/original/transportation?type=png",
+          n: "Chủ đề 12",
+          w: [
+            ["xe ô tô / xe hơi", "car", "noun", "a road vehicle that has four wheels, an engine, and a small number of seats", "49365/thumb/car?type=jpeg", ["I drive my car to work every day."]],
+            ["xe đạp", "bicycle", "noun", "a vehicle with two wheels that we ride by pushing its pedals with our feet", "36854/thumb/bicycle?type=jpeg", ["He wears a helmet for safety when riding his bicycle."]],
+            ["xe buýt", "bus", "noun", "a large vehicle that carries many passengers by road", "49484/thumb/bus?type=jpeg", ["I prefer sitting near the window when I'm on the bus."]],
+            ["tàu hỏa", "train", "noun", "a series of connected carriages that travel on a railroad", "49496/thumb/train?type=jpeg", ["He prefers traveling by train because it's more relaxing than driving."]],
+            ["tàu điện ngầm", "subway", "noun", "an underground railroad system, typically in a big city", "49490/thumb/subway?type=jpeg", ["I prefer taking the subway instead of driving in the city."]],
+            ["xe máy / mô tô", "motorcycle", "noun", "a vehicle with two wheels, powered by an engine", "49488/thumb/motorcycle?type=jpeg", ["He rides his motorcycle to work every day."]],
+            ["xe taxi", "taxi", "noun", "a car with a driver that passengers pay to take them to a particular place", "49512/thumb/taxi?type=jpeg", ["Emma took a taxi from the airport to her hotel."]],
+            ["máy bay", "airplane", "noun", "a flying vehicle with fixed wings that moves people and goods through the sky", "49478/thumb/airplane?type=jpeg", ["I always feel excited when the airplane takes off."]],
+            ["trực thăng", "helicopter", "noun", "an aircraft with rotating blades that allow it to take off and land vertically", "49486/thumb/helicopter?type=jpeg", ["The rescue team arrived by helicopter."]],
+            ["tàu thủy lớn", "ship", "noun", "a large boat, used for carrying passengers or goods across the sea", "49508/thumb/ship?type=jpeg", ["The ship sailed across the ocean, carrying cargo from one country to another."]]
+          ]
+        }
+      ]
+    },
+    {
+      id: "a1",
+      name: "Sơ cấp A1 (Beginner A1)",
+      short: "A1",
+      tag: "CEFR A1 · Tiếng Việt → Tiếng Anh",
+      ac: "#7fbf9e",
+      topics: [
+        {
+          id: 1,
+          t: "Chào hỏi và Tạm biệt (Hello and Goodbye)",
+          enT: "Hello and Goodbye",
+          p: "57036/thumb/lesson-1?type=png",
+          n: "Lesson 1",
+          w: [
+            ["xin chào", "hello", "interjection", "a word we say when we meet someone or answer the phone", "35651/thumb/hello?type=jpeg", ["Hello, I am the new student and my name is Sarah.", "Hello, I'm new here. Can you show me around?", "Hello there! What brings you to this part of town?"]],
+            ["tạm biệt", "goodbye", "interjection", "a word we say when we leave or end a phone call", "35657/thumb/goodbye?type=jpeg", ["Goodbye, I hope to see you again.", "Goodbye, take care of yourself.", "Goodbye, see you later."]],
+            ["chào (thân mật)", "hi", "interjection", "a short way to say hello", "35653/thumb/hello?type=jpeg", ["Hi, nice to meet you.", "Hi, what is your name?", "Hi, would you like to join us for lunch?"]],
+            ["tạm biệt nhé", "bye", "interjection", "used as an informal way of saying goodbye", "35657/thumb/goodbye?type=jpeg", ["Bye, Emma! See you tomorrow.", "Daniel waved and said, \"Bye!\"", "Bye, everyone. Have a good weekend."]],
+            ["chào buổi sáng", "good morning", "interjection", "what we say to greet someone in the morning", "47524/thumb/good-morning?type=jpeg", ["Good morning, it's a beautiful day today!", "Good morning! How did you sleep?", "Good morning! What are your plans for today?"]],
+            ["chào buổi chiều", "good afternoon", "interjection", "what we say to greet or say goodbye in the afternoon", "47596/thumb/good-afternoon?type=jpeg", ["Good afternoon, have you finished your work for today?", "Good afternoon, I hope you're enjoying your day so far.", "Good afternoon, the weather is perfect for a walk."]],
+            ["chào buổi tối", "good evening", "interjection", "what we say to greet or say goodbye in the evening", "47728/thumb/good-evening?type=jpeg", ["Good evening, I hope you had a pleasant day.", "Good evening, it's getting dark outside.", "Good evening! What's your favorite evening activity?"]],
+            ["chúc ngủ ngon", "good night", "interjection", "what we say before going to sleep or leaving at night", "47769/thumb/good-night?type=jpeg", ["Good night, don't forget to brush your teeth before bed.", "Good night, it's time to say goodbye to the day.", "Good night! Sleep well and sweet dreams."]],
+            ["cảm ơn bạn", "thank you", "interjection", "what we say to show we are happy for something someone did", "60817/thumb?type=jpeg", ["Thank you for being there when I needed someone.", "Thank you for the delicious meal!", "Thank you for your kind words, they made my day."]],
+            ["cảm ơn (ngắn gọn)", "thanks", "interjection", "a short way to say thank you", "35700/thumb/thanks?type=jpeg", ["Thanks for the help!", "Thanks for the information, it was very useful.", "Thanks, I'm so lucky to have you."]],
+            ["làm ơn / vui lòng", "please", "adverb", "used when we want to politely ask for something or tell a person to do something", "47520/thumb/please?type=jpeg", ["Be quiet, please.", "Can I have some more, please?", "Close the door, please."]],
+            ["đồng ý / ổn (OK)", "OK", "interjection", "used to express agreement, acceptance, or approval", "61780/thumb/great?type=jpeg", ["\"Can we meet at six?\" \"OK.\"", "\"I'll call you tomorrow.\" \"OK.\"", "\"Let's take the train instead.\" \"OK, that sounds good.\""]],
+            ["vâng / có / đúng", "yes", "interjection", "a word to show agreement or say something is true", "47440/thumb/yes?type=jpeg", ["Yes, he is my friend.", "Yes, I understand what you mean.", "Yes, it is my favorite color."]],
+            ["không", "no", "interjection", "used to indicate denial, refusal, or disagreement in response to a question or offer", "47442/thumb/no?type=jpeg", ["Did you call her? — No.", "Would you like some coffee? — No, thank you.", "Is he coming with us? — No, he's staying home."]],
+            ["xin lỗi", "sorry", "interjection", "a word we use to say we feel bad about something", "35698/thumb/sorry?type=jpeg", ["Sorry, I forgot to bring my umbrella.", "Sorry, it's not possible to lend you my car.", "Sorry, they can't join us for dinner."]],
+            ["chào mừng / hoan nghênh", "welcome", "interjection", "a word that we use to greet someone when they arrive", "47522/thumb/welcome?type=jpeg", ["Welcome, Come on in and make yourself at home.", "Welcome, Enjoy your stay at our hotel.", "Welcome, Thank you for choosing our restaurant."]]
+          ]
+        },
+        {
+          id: 19,
+          t: "Con người (People)",
+          enT: "People",
+          p: "57040/thumb/lesson-2?type=png",
+          n: "Lesson 2",
+          w: [
+            ["người đàn ông", "man", "noun", "a person who is a male adult", "60877/thumb/man?type=jpeg", ["This is my friend, he's a nice man.", "My dad is a strong man who can lift heavy things.", "The man in the blue shirt is my neighbor."]],
+            ["người phụ nữ", "woman", "noun", "a person who is a female adult", "60919/thumb/woman?type=jpeg", ["This is my sister; she's a kind woman.", "Look at the woman with the red hat; she's smiling.", "The woman at the library helped me find a book."]],
+            ["cậu bé / con trai", "boy", "noun", "someone who is a child and a male", "60862/thumb/boy?type=jpeg", ["This is my little brother; he's a playful boy.", "Look at the boy with the backpack; he's going to school.", "The boy in the park is flying a kite."]],
+            ["cô bé / con gái", "girl", "noun", "someone who is a child and a female", "60869/thumb/girl?type=jpeg", ["This is my friend; she's a cheerful girl.", "Look at the girl with the pink dress; she's playing with a doll.", "The girl in the garden is picking flowers."]],
+            ["người bạn", "friend", "noun", "someone we like and trust", "47759/thumb/friend?type=jpeg", ["David and Samantha became friends after meeting at a book club.", "Jenny and Amy have been friends for years.", "Mark and Lisa have been close friends since childhood."]],
+            ["bạn trai", "boyfriend", "noun", "a man or boy with whom someone is having a romantic relationship", "47905/thumb/boyfriend?type=jpeg", ["Emma introduced Daniel as her boyfriend at the party.", "Sarah and her boyfriend are planning a trip to California.", "Her boyfriend surprised her with dinner after work."]],
+            ["bạn gái", "girlfriend", "noun", "a woman or girl with whom someone has a romantic relationship", "47907/thumb/girlfriend?type=jpeg", ["Michael introduced Sarah as his girlfriend.", "Jake and his girlfriend have been together for three years.", "Emma met her brother's new girlfriend at dinner."]],
+            ["một người / cá nhân", "person", "noun", "one human", "47909/thumb/person?type=jpeg", ["As a responsible person, it is important to be mindful of our impact on the environment.", "Every person has the right to express their opinions and beliefs.", "The organization is committed to promoting equality and fairness for every person."]],
+            ["mọi người / con người", "people", "noun", "a group of humans", "47911/thumb/public?type=jpeg", ["It is important to listen to the voices of the people and address their concerns.", "Many people find solace in spending time with loved ones.", "People around the world enjoy various forms of music as a universal language."]],
+            ["người trưởng thành", "adult", "noun", "a fully grown man or woman", "60843/thumb/adult?type=jpeg", ["Adults have the freedom to make their own decisions and choices.", "As an adult, she took on the responsibilities of her career and family.", "Many adult learners enroll in evening classes to pursue further education."]],
+            ["em bé sơ sinh", "baby", "noun", "a very young child", "60857/thumb/baby?type=jpeg", ["A babysitter was hired to take care of the baby while the parents were out.", "She cradled the sleeping baby in her arms.", "The baby giggled and clapped its hands in delight."]],
+            ["Ông / Ngài (Mr)", "Mr", "noun", "a formal title for a man", "60889/thumb/mr-?type=jpeg", ["Mr. Lee is the teacher in charge of the science department.", "She greeted Mr. Patel with a warm smile at the conference.", "The invitation was sent to Mr. and Mrs. Clarke."]],
+            ["Bà / Phu nhân (Mrs)", "Mrs", "noun", "a formal title for a married woman", "60901/thumb/mrs-?type=jpeg", ["Mrs. Smith will chair the committee meeting tomorrow.", "The package was addressed to Mrs. Margaret Johnson.", "She introduced herself as Mrs. Carter, the event organizer."]],
+            ["Cô / Quý cô (Miss)", "miss", "noun", "a formal title for an unmarried woman", "60879/thumb/miss?type=jpeg", ["Miss Johnson greeted the guests with a warm smile as they arrived at the party.", "Excuse me, Miss Smith, do you have a moment to answer a few questions?", "The letter was addressed to Miss Emily Jones, inviting her to attend the upcoming event."]]
+          ]
+        },
+        {
+          id: 2,
+          t: "Số đếm 0 đến 100 (Numbers 0 to 100)",
+          enT: "Numbers 0 to 100",
+          p: "57038/thumb/lesson-3?type=png",
+          n: "Lesson 3",
+          w: [
+            ["số không (0)", "zero", "numeral", "the number 0", "40869/thumb/zero?type=jpeg", ["I have zero dollars in my wallet.", "She counted zero stars in the sky."]],
+            ["số một (1)", "one", "numeral", "the number 1", "35938/thumb/one?type=jpeg", ["I have one book.", "She has one brother and two sisters."]],
+            ["số hai (2)", "two", "numeral", "the number 2", "35970/thumb/two?type=jpeg", ["I need to make two copies of this document.", "Look at those two birds on the tree."]],
+            ["số ba (3)", "three", "numeral", "the number 3", "35944/thumb/three?type=jpeg", ["I counted to three before jumping into the pool.", "Look at the three birds flying in the sky."]],
+            ["số bốn (4)", "four", "numeral", "the number 4", "35946/thumb/four?type=jpeg", ["There are four seasons in a year.", "There are four chairs around the dining table."]],
+            ["số năm (5)", "five", "numeral", "the number 5", "35948/thumb/five?type=jpeg", ["She drew a picture of a hand with five fingers.", "I have five cookies in my lunchbox."]],
+            ["số sáu (6)", "six", "numeral", "the number 6", "35950/thumb/six?type=jpeg", ["There are six colorful crayons in the box."]],
+            ["số bảy (7)", "seven", "numeral", "the number 7", "35952/thumb/seven?type=jpeg", ["The recipe called for seven ingredients."]],
+            ["số tám (8)", "eight", "numeral", "the number 8", "35954/thumb/eight?type=jpeg", ["There are eight crayons in the box."]],
+            ["số chín (9)", "nine", "numeral", "the number 9", "35976/thumb/nine?type=jpeg", ["Look at the nine birds perched on the tree."]],
+            ["số mười (10)", "ten", "numeral", "the number 10", "35982/thumb/ten?type=jpeg", ["There are ten fingers on two hands.", "There are ten cookies in the jar."]],
+            ["số hai mươi (20)", "twenty", "numeral", "the number 20", "36014/thumb/twenty?type=jpeg", ["The distance between the two cities is twenty kilometers."]],
+            ["số năm mươi (50)", "fifty", "numeral", "the number 50", "36106/thumb/fifty?type=jpeg", ["There were fifty participants in the marathon."]],
+            ["một trăm (100)", "hundred", "numeral", "the number 100", "36208/thumb/hundred?type=jpeg", ["She saved up a hundred dollars to buy a new bicycle."]]
+          ]
+        },
+        {
+          id: 3,
+          t: "Gia đình (Family)",
+          enT: "Family",
+          p: "68118/thumb/lesson-4?type=png",
+          n: "Lesson 4",
+          w: [
+            ["cha mẹ / phụ huynh", "parent", "noun", "our mother or our father", "60883/thumb/parent?type=jpeg", ["Becoming a parent is a life-changing experience.", "My parent always encouraged me to pursue my dreams."]],
+            ["người cha / bố", "father", "noun", "a child's male parent", "60849/thumb/father?type=jpeg", ["John's father is an engineer.", "Fathers play a crucial role in their children's upbringing."]],
+            ["người mẹ / má", "mother", "noun", "a child's female parent", "60867/thumb/mother?type=jpeg", ["My mother is the most caring and loving person I know."]],
+            ["bố / ba (thân mật)", "dad", "noun", "an informal way of calling our father", "60849/thumb/father?type=jpeg", ["My dad is a great cook and makes the best pancakes on weekends."]],
+            ["mẹ / má (thân mật)", "mom", "noun", "a woman who has given birth to a child or raises a child", "60867/thumb/mother?type=jpeg", ["Mom, can you help me with my homework?"]],
+            ["người vợ", "wife", "noun", "the lady you are officially married to", "60913/thumb/wife?type=jpeg", ["John introduced his wife to his colleagues at the company dinner party."]],
+            ["người chồng", "husband", "noun", "the man you are officially married to", "60863/thumb/husband?type=jpeg", ["My husband is a hardworking and supportive partner."]],
+            ["đứa trẻ / con cái", "child", "noun", "a son or daughter of any age", "60837/thumb/child?type=jpeg", ["She read a bedtime story to her child every night."]],
+            ["con trai", "son", "noun", "a person's male child", "60893/thumb/son?type=jpeg", ["My son is a talented musician and plays the guitar beautifully."]],
+            ["con gái", "daughter", "noun", "a person's female child", "60841/thumb/daughter?type=jpeg", ["Julia's daughter surprised her with a heartfelt handmade card."]],
+            ["chị gái / em gái", "sister", "noun", "a lady who shares a mother and father with us", "60891/thumb/sister?type=jpeg", ["They are very close sisters and do everything together."]],
+            ["anh trai / em trai", "brother", "noun", "a man who shares a mother and father with us", "60833/thumb/brother?type=jpeg", ["My brother is my best friend and we tell each other everything."]],
+            ["gia đình", "family", "noun", "people that are related to each other by blood or marriage", "60845/thumb/family?type=jpeg", ["My family likes to go on vacation together every year."]],
+            ["bà (nội / ngoại)", "grandmother", "noun", "the mother of a person's mother or father", "60859/thumb/grandmother?type=jpeg", ["Emma visits her grandmother every Sunday."]],
+            ["ông (nội / ngoại)", "grandfather", "noun", "the father of a person's mother or father", "60855/thumb/grandfather?type=jpeg", ["Daniel's grandfather taught him how to fish."]],
+            ["cô / dì / bác gái", "aunt", "noun", "the sister of one's mother or father, or the wife of one's uncle", "60831/thumb/aunt?type=jpeg", ["Emma is visiting her aunt this weekend."]],
+            ["chú / bác / cậu", "uncle", "noun", "the brother of our father or mother or their sibling's husband", "60903/thumb/uncle?type=jpeg", ["They often go to their uncle's house for family dinners."]],
+            ["anh chị em họ", "cousin", "noun", "a child of one's aunt or uncle", "60839/thumb/cousin?type=jpeg", ["My cousin and I grew up in the same neighborhood."]]
+          ]
+        },
+        {
+          id: 4,
+          t: "Màu sắc (Colors)",
+          enT: "Colors",
+          p: "57041/thumb/lesson-5?type=png",
+          n: "Lesson 5",
+          w: [
+            ["màu đen", "black", "adjective", "having the color that is the darkest, like most crows", "47839/thumb/black?type=jpeg", ["She has a black cat named Midnight who loves to cuddle."]],
+            ["màu trắng", "white", "adjective", "having the color that is the lightest, like snow", "29080/thumb/white?type=jpeg", ["The bride's wedding dress is white."]],
+            ["màu xanh dương", "blue", "adjective", "having the color of the ocean or clear sky at daytime", "47821/thumb/blue?type=jpeg", ["The blue sky was clear and beautiful."]],
+            ["màu xanh lá cây", "green", "adjective", "having the color of fresh grass or most plant leaves", "47837/thumb/green?type=jpeg", ["The green frog hopped from one lily pad to another."]],
+            ["màu vàng", "yellow", "adjective", "having the color of lemons or the sun", "47825/thumb/yellow?type=jpeg", ["She drew a yellow sun on the corner of the paper."]],
+            ["màu đỏ", "red", "adjective", "having the color of tomatoes or blood", "47823/thumb/red?type=jpeg", ["She drew a red heart on the card."]],
+            ["màu hồng", "pink", "adjective", "having the color of strawberry ice cream", "47831/thumb/pink?type=jpeg", ["She wore a pink dress to the wedding."]],
+            ["màu cam", "orange", "adjective", "having a color between red and yellow", "47835/thumb/orange?type=jpeg", ["The sky turned orange as the sun began to set."]],
+            ["màu tím", "purple", "adjective", "having a color between red and blue", "47833/thumb/purple?type=jpeg", ["The garden was filled with purple flowers."]],
+            ["màu xám", "gray", "adjective", "having a color between white and black", "47829/thumb/gray?type=jpeg", ["The cat's fur was gray and he had bright green eyes."]],
+            ["màu nâu", "brown", "adjective", "having the color of chocolate ice cream", "47827/thumb/brown?type=jpeg", ["The table was made of rich, brown wood."]]
+          ]
+        },
+        {
+          id: 6,
+          t: "Thời gian và Ngày tháng (Time and Date)",
+          enT: "Time and Date",
+          p: "57043/thumb/lesson-7?type=png",
+          n: "Lesson 7",
+          w: [
+            ["đồng hồ treo tường / để bàn", "clock", "noun", "a device used to measure and show time", "47903/thumb/clock?type=jpeg", ["I have a digital clock on my bedside table."]],
+            ["năm", "year", "noun", "a period of time that is made up of twelve months", "48599/thumb/year?type=jpeg", ["My family goes on a vacation once a year."]],
+            ["thời gian", "time", "noun", "the quantity that is measured in seconds, minutes, hours, etc.", "48023/thumb/time?type=jpeg", ["It's important to manage your time wisely."]],
+            ["ngày", "day", "noun", "a period of time that is made up of twenty-four hours", "51576/thumb/day?type=jpeg", ["I make a to-do list every day to stay organized."]],
+            ["giờ / tiếng đồng hồ", "hour", "noun", "each of the twenty-four time periods in a day made up of sixty minutes", "51536/thumb/hour?type=jpeg", ["I usually sleep for eight hours every night."]],
+            ["phút", "minute", "noun", "each of the sixty parts that creates one hour", "51538/thumb/minute?type=jpeg", ["I like to take a short break every 30 minutes of studying."]],
+            ["buổi sáng", "morning", "noun", "the time of day between sunrise and noon", "48569/thumb/morning?type=jpeg", ["My mother waters the plants in our garden every morning."]],
+            ["buổi chiều", "afternoon", "noun", "the time of day between twelve o'clock and sunset", "50255/thumb/afternoon?type=jpeg", ["He likes to take a walk in the park during the afternoon."]],
+            ["buổi tối", "evening", "noun", "the time of day between sunset and bedtime", "48437/thumb/evening?type=jpeg", ["I enjoy having dinner with my family in the evening."]],
+            ["ban đêm", "night", "noun", "the time when the sun goes down, it gets dark outside, and we sleep", "48493/thumb/night?type=jpeg", ["I like to read a book before bed at night."]],
+            ["tuần lễ", "week", "noun", "a period of time that is made up of seven days in a calendar", "60909/thumb/week?type=jpeg", ["He tries to exercise at least three times a week."]],
+            ["cuối tuần", "weekend", "noun", "Saturday and Sunday, when people do not have to go to work or school", "60911/thumb/weekend?type=jpeg", ["I like to sleep in and have a late breakfast on the weekends."]]
+          ]
+        },
+        {
+          id: 12,
+          t: "Nhà và Căn hộ (House and Apartment)",
+          enT: "House and Apartment",
+          p: "57048/thumb/lesson-12?type=png",
+          n: "Lesson 12",
+          w: [
+            ["tòa nhà", "building", "noun", "a structure that has walls, a roof, and sometimes many levels", "51628/thumb/building?type=jpeg", ["He worked in a modern office building with large windows."]],
+            ["ngôi nhà", "house", "noun", "a building where people live, especially as a family", "22179/thumb/house?type=jpeg", ["She invited her friends over to her house for a birthday party."]],
+            ["tổ ấm / nhà", "home", "noun", "the place that we live in, usually with our family", "48505/thumb/home?type=jpeg", ["The family moved into a new home in the suburbs."]],
+            ["căn hộ chung cư", "apartment", "noun", "a place that has a few rooms for people to live in, part of a larger building", "21607/thumb?type=jpeg", ["He rented an apartment in the city to be closer to his workplace."]],
+            ["sàn nhà", "floor", "noun", "the bottom of a room that we walk on", "48351/thumb/floor?type=jpeg", ["He swept the floor to remove the dust and dirt."]],
+            ["cánh cửa", "door", "noun", "the thing we move to enter, exit, or access a place", "20810/thumb/door?type=jpeg", ["He locked the door before leaving the house."]],
+            ["cửa sổ", "window", "noun", "a space in a wall made of glass that we use to look outside", "20818/thumb/window?type=jpeg", ["She opened the window to let in some fresh air."]],
+            ["bức tường", "wall", "noun", "an upright structure made of brick, concrete, or stone", "20855/thumb/wall?type=jpeg", ["He placed a bookshelf against the wall to store his books."]],
+            ["phòng khách", "living room", "noun", "the part of a house where people spend time together talking or watching TV", "50809/thumb/living-room?type=jpeg", ["She gathered with her family in the living room to play board games."]],
+            ["nhà bếp", "kitchen", "noun", "the place in a building or home where we make food", "22167/thumb/kitchen?type=jpeg", ["She cooked a delicious meal in the kitchen."]],
+            ["phòng ngủ", "bedroom", "noun", "a room we use for sleeping", "50791/thumb/bedroom?type=jpeg", ["He kept his favorite toys on the shelves in his bedroom."]],
+            ["phòng tắm", "bathroom", "noun", "a room containing a toilet and sink", "48355/thumb/bathroom?type=jpeg", ["Excuse me, where is the bathroom?"]]
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+(() => {
+'use strict';
+/* ====================== helpers ====================== */
+const PHOTO = 'https://cdn.langeek.co/photo/';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const photoUrl = p => !p ? '' : (/^https?:/.test(p) ? p : PHOTO + p);
+const hue = s => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 360; return h; };
+const fmt = n => n.toLocaleString('en-US');
+const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function shuffled(arr, seed) { const a = arr.slice(), r = rng(seed); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+let toastT; function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 1800); }
+
+/* ====================== model (Vietnamese -> English) ====================== */
+const COLS = DATA.cols.map(c => ({ id: c.id, name: c.name, short: c.short, tag: c.tag, ac: c.ac, topics: [] }));
+const COLBY = Object.fromEntries(COLS.map(c => [c.id, c]));
+const TBY = {}, ALLWORDS = [], BYTITLE = {};
+DATA.cols.forEach((c, ci) => {
+  c.topics.forEach(t => {
+    const topic = {
+      key: c.id + '-' + t.id,
+      id: t.id,
+      title: t.t,
+      enTitle: t.enT || t.t,
+      photo: photoUrl(t.p),
+      n: t.n || '',
+      col: COLS[ci],
+      words: [],
+      h: hue(t.t)
+    };
+    topic.words = t.w.map((w, i) => {
+      // w format: [viWord, enWord, pos, enDefinition, photo, examples]
+      const o = {
+        w: w[0],        // Vietnamese main word
+        en: w[1],       // English word
+        p: w[2],        // Part of speech
+        d: w[3],        // English meaning / definition
+        ph: photoUrl(w[4]),
+        e: w[5] || [],
+        t: topic,
+        i
+      };
+      o.lw = o.w.toLowerCase();
+      o.len = o.en.toLowerCase();
+      o.ld = o.d.toLowerCase();
+      o.h = hue(o.en);
+      return o;
+    });
+    COLS[ci].topics.push(topic);
+    TBY[topic.key] = topic;
+    ALLWORDS.push(...topic.words);
+    (BYTITLE[topic.enTitle.toLowerCase().trim()] ||= []).push(topic);
+  });
+  COLS[ci].wordCount = COLS[ci].topics.reduce((a, t) => a + t.words.length, 0);
+  COLS[ci].words = COLS[ci].topics.flatMap(t => t.words);
+});
+const TOTAL_TOPICS = Object.keys(TBY).length;
+
+/* Automatic Live Translation Fallback for any custom/uncached words */
+const viCache = store.get('vv.viCache', {});
+async function ensureVietnameseWord(wObj) {
+  if (!wObj || wObj.viChecked) return;
+  wObj.viChecked = true;
+  if (wObj.w && wObj.w !== wObj.en) return;
+  const cached = viCache[wObj.len];
+  if (cached) {
+    wObj.w = cached;
+    wObj.lw = cached.toLowerCase();
+    return;
+  }
+  try {
+    const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(wObj.en)}`);
+    const data = await res.json();
+    const vi = data?.[0]?.[0]?.[0];
+    if (vi) {
+      wObj.w = vi.toLowerCase();
+      wObj.lw = wObj.w;
+      viCache[wObj.len] = wObj.w;
+      store.set('vv.viCache', viCache);
+      if (S.studyOpen && S.list[S.si] === wObj) $('#stWord').textContent = wObj.w;
+    }
+  } catch (err) {}
+}
+
+/* ====================== persistence ====================== */
+let LEARNED = store.get('vv.learned', {});
+const isLearned = w => (LEARNED[w.t.key] || []).includes(w.i);
+function toggleLearned(w) {
+  const a = LEARNED[w.t.key] || (LEARNED[w.t.key] = []);
+  const k = a.indexOf(w.i);
+  if (k >= 0) a.splice(k, 1); else a.push(w.i);
+  if (!a.length) delete LEARNED[w.t.key];
+  store.set('vv.learned', LEARNED);
+  return k < 0;
+}
+const learnedCount = t => (LEARNED[t.key] || []).length;
+
+/* ====================== state & routing ====================== */
+const S = { r: null, base: null, all: [], list: [], q: '', st: 'all', shuf: 0, si: 0, guess: false, play: null, shown: 0, depth: 0, studyOpen: false, io: null, hdrHidden: false, view: 'cards', cmp: [] };
+
+function parse() {
+  const h = location.hash.replace(/^#/, '');
+  const [path, qs] = h.split('?');
+  const seg = (path || '/').split('/').filter(Boolean).map(decodeURIComponent);
+  const params = new URLSearchParams(qs || '');
+  const r = { name: 'home', i: parseInt(params.get('i'), 10) || 0 };
+  if (seg[0] === 'c' && COLBY[seg[1]]) { r.cid = seg[1]; r.name = seg[2] === 'words' ? 'cwords' : 'col'; }
+  else if (seg[0] === 't' && TBY[seg[1]]) { r.name = 'topic'; r.tkey = seg[1]; }
+  else if (seg[0] === 'search') { r.name = 'search'; r.q = seg.slice(1).join('/'); }
+  else if (seg[0] === 'compare') { r.name = 'compare'; r.w = params.get('w') || ''; }
+  r.base = '/' + (r.name === 'home' ? '' : r.name === 'col' ? 'c/' + r.cid : r.name === 'cwords' ? 'c/' + r.cid + '/words' : r.name === 'topic' ? 't/' + r.tkey : r.name === 'compare' ? 'compare' : 'search/' + encodeURIComponent(r.q));
+  return r;
+}
+function go(hash, replace) {
+  if (replace) { history.replaceState(null, '', hash); route(false); }
+  else if (location.hash === hash) route(false);
+  else location.hash = hash;
+}
+function route(fromEvent) {
+  const r = parse(); S.r = r;
+  if (r.base !== S.base) {
+    stopPlay(); S.base = r.base; S.all = []; S.list = []; S.q = ''; S.st = 'all'; S.shuf = 0; S.depth = 0;
+    closeStudyUI();
+    renderView(r);
+    window.scrollTo(0, 0);
+    showHdr();
+  }
+  syncStudy(r, fromEvent !== false);
+  syncNav(r);
+  updateCmpUI();
+}
+window.addEventListener('hashchange', () => route(true));
+
+/* ====================== tiles ====================== */
+function imgTag(src, alt) { return src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async">` : ''; }
+function topicTile(t) {
+  const n = t.words.length, lc = learnedCount(t), pct = n ? Math.round(lc / n * 100) : 0;
+  return `<a class="tc" href="#/t/${t.key}" style="--h:${t.h};--ac:${t.col.ac}" aria-label="${esc(t.title)}, ${n} từ">
+    <div class="tc-img">${imgTag(t.photo, t.title)}<span class="ph">${esc(t.title.charAt(0))}</span></div>
+    <div class="tc-h"><span class="tc-w">${esc(t.title)}</span><span class="tc-p">[${esc(t.col.short)}${t.n ? ' · ' + esc(t.n) : ''}]</span></div>
+    <p class="tc-d">${n} từ vựng (words)${lc ? ' · ' + pct + '% đã thuộc' : ''}</p>${lc ? `<i class="tc-bar" style="width:${pct}%"></i>` : ''}</a>`;
+}
+function wordTile(w, idx, base) {
+  return `<a class="tc${isLearned(w) ? ' is-done' : ''}" data-n="${idx}" href="#${base}?i=${idx + 1}" style="--h:${w.h}" title="${esc(w.en + ' — ' + w.d)}" aria-label="${esc(w.w)} (${esc(w.en)})">
+    <div class="tc-img">${imgTag(w.ph, w.w)}<span class="ph">${esc(w.w.charAt(0))}</span></div>
+    <div class="tc-h"><span class="tc-w">${esc(w.w)}</span>${w.p ? `<span class="tc-p">[${esc(w.p)}]</span>` : ''}</div>
+    <p class="tc-d"><strong>EN: ${esc(w.en)}</strong> — ${esc(w.d)}</p></a>`;
+}
+
+/* ====================== compare state ====================== */
+const wkey = w => w.t.key + '.' + w.i;
+const fromKey = k => { const m = /^(.+)\.(\d+)$/.exec(k || ''); const t = m && TBY[m[1]]; return t ? t.words[+m[2]] : null; };
+S.cmp = (store.get('vv.cmp', []) || []).map(fromKey).filter(Boolean).slice(0, 4);
+function saveCmp() { store.set('vv.cmp', S.cmp.map(wkey)); updateCmpUI(); }
+function toggleCmp(w) {
+  const i = S.cmp.indexOf(w);
+  if (i >= 0) { S.cmp.splice(i, 1); toast('Đã xóa “' + w.w + '” khỏi so sánh'); }
+  else { if (S.cmp.length >= 4) return toast('Chỉ có thể so sánh tối đa 4 từ'); S.cmp.push(w); toast(S.cmp.length < 2 ? 'Đã thêm “' + w.w + '” — chọn thêm 1 từ nữa' : 'Đã thêm “' + w.w + '” vào so sánh'); }
+  saveCmp();
+  if (S.r && S.r.name === 'compare') renderCompareBody();
+}
+const ICON = {
+  cube: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4 7.3v9.4l8 4.5 8-4.5V7.3l-8-4.5Z"/><path d="m4 7.3 8 4.5 8-4.5M12 11.8v9.4"/><circle cx="15.2" cy="7.6" r=".9" fill="currentColor" stroke="none"/></svg>',
+  plus: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="3.5"/><path d="M12 9.2v5.6M9.2 12h5.6"/></svg>',
+  check: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="3.5"/><path d="m8.6 12.2 2.4 2.4 4.4-4.8"/></svg>'
+};
+function updateCmpUI() {
+  $$('.cmp-btn').forEach(b => {
+    const w = fromKey(b.dataset.k), on = S.cmp.includes(w);
+    b.classList.toggle('on', on); b.title = on ? 'Xóa khỏi so sánh' : 'Thêm vào so sánh'; b.setAttribute('aria-pressed', on);
+    if (b.classList.contains('wc-b')) b.innerHTML = on ? ICON.check : ICON.plus;
+  });
+  const n = $('#cmpN'); n.hidden = !S.cmp.length; n.textContent = S.cmp.length;
+  const sc = $('#stCmp'); if (sc) { const w = S.list[S.si]; sc.classList.toggle('on', !!w && S.cmp.includes(w)); }
+  const t = $('#tray'), onCmp = S.r && S.r.name === 'compare';
+  if (!S.cmp.length || onCmp) { t.classList.remove('show'); return; }
+  const ok = S.cmp.length >= 2;
+  t.innerHTML = `<div class="tr-items">${S.cmp.map(w => `<span class="tr-it"><span class="tr-th">${esc(w.w.charAt(0))}${w.ph ? `<img src="${esc(w.ph)}" alt="">` : ''}</span><em>${esc(w.w)} (${esc(w.en)})</em><button data-rm="${wkey(w)}" aria-label="Xóa ${esc(w.w)}">×</button></span>`).join('')}</div>
+    ${ok ? '' : '<span class="tr-hint">Chọn thêm 1 từ nữa</span>'}<button class="btn sm" id="trClear">Xóa</button><a class="btn pri sm${ok ? '' : ' dis'}" href="#/compare">So sánh ${S.cmp.length} →</a>`;
+  t.classList.add('show');
+}
+
+/* ====================== Word Card (Vietnamese word + English meaning) ====================== */
+function wordCard(w, idx, base) {
+  const href = `#${base}?i=${idx + 1}`, on = S.cmp.includes(w);
+  const ex = w.e[0] ? `<div class="wc-ex"><b>Ex:</b> ${hlExample(w.e[0], w.en)}</div>` : '';
+  return `<article class="wc${isLearned(w) ? ' is-done' : ''}" data-n="${idx}" style="--h:${w.h}">
+    <a class="wc-img" href="${href}" aria-label="Học từ ${esc(w.w)}" tabindex="-1">${imgTag(w.ph, w.w)}<span class="ph">${esc(w.w.charAt(0))}</span></a>
+    <div class="wc-h">
+      <a class="wc-w" href="${href}">${esc(w.w)}</a>
+      <span class="wc-en-badge">EN: ${esc(w.en)}</span>
+      ${w.p ? `<span class="wc-p">[${esc(w.p)}]</span>` : ''}
+    </div>
+    <p class="wc-d"><strong class="en-lead">${esc(w.en)}</strong> — ${esc(w.d)}</p>${ex}
+    <div class="wc-act">
+      <a class="wc-b" href="${href}" title="Mở thẻ học lớn" aria-label="Học ${esc(w.w)}">${ICON.cube}</a>
+      <button class="wc-b" data-say-vi="${esc(w.w)}" title="Nghe phát âm Tiếng Việt">🇻🇳 VI</button>
+      <button class="wc-b" data-say="${esc(w.en)}" title="Nghe phát âm Tiếng Anh">🇬🇧 EN</button>
+      <button class="wc-b cmp-btn${on ? ' on' : ''}" data-k="${wkey(w)}" title="${on ? 'Xóa khỏi so sánh' : 'Thêm vào so sánh'}" aria-pressed="${on}" aria-label="So sánh ${esc(w.w)}">${on ? ICON.check : ICON.plus}</button>
+    </div></article>`;
+}
+const viewSeg = () => `<div class="seg" id="vwSeg" title="Kiểu hiển thị"><button data-v="cards" class="${S.view === 'cards' ? 'on' : ''}">▤ Cards</button><button data-v="mosaic" class="${S.view === 'mosaic' ? 'on' : ''}">▦ Compact</button></div>`;
+function bindViewSeg() { $$('#vwSeg button').forEach(b => b.onclick = () => { S.view = b.dataset.v; store.set('vv.view', S.view); $$('#vwSeg button').forEach(x => x.classList.toggle('on', x === b)); mountGrid(); }); }
+function band(c, opts = {}) {
+  return `<div class="band" style="--ac:${c.ac}"><div class="band-l"><span class="lv">${esc(c.id === 'pic' ? '◐' : c.short)}</span>
+    <div><h2>${esc(c.name)}</h2><p>${c.topics.length} ${c.id === 'pic' ? 'chủ đề' : 'bài học'} · ${fmt(c.wordCount)} từ vựng (Vietnamese → English)</p></div></div>
+    ${opts.noLink ? '' : `<a class="more" href="#/c/${c.id}">Mở ${esc(c.short)} →</a>`}</div>`;
+}
+
+/* ====================== views ====================== */
+const VIEW = $('#view');
+function renderView(r) {
+  S.io && S.io.disconnect();
+  VIEW.style.animation = 'none'; void VIEW.offsetWidth; VIEW.style.animation = '';
+  if (r.name === 'home') return viewHome();
+  if (r.name === 'col') return viewCollection(r.cid);
+  if (r.name === 'topic') return viewTopic(TBY[r.tkey]);
+  if (r.name === 'cwords') return viewDeck({ title: COLBY[r.cid].name + ' — tất cả từ vựng', col: COLBY[r.cid], words: COLBY[r.cid].words });
+  if (r.name === 'search') return viewSearch(r.q);
+  if (r.name === 'compare') return viewCompare(r);
+}
+const footer = () => `<footer class="foot"><span>Từ vựng Hình ảnh (Vietnamese → English) · ${fmt(ALLWORDS.length)} từ vựng · ${TOTAL_TOPICS} bài học · Phím tắt: ← → Space P V G S C K F /</span><span>Hình ảnh minh họa © <a href="https://langeek.co" target="_blank" rel="noopener noreferrer">LanGeek</a></span></footer>`;
+
+function viewHome() {
+  const last = store.get('vv.last', null);
+  const resume = last && last.hash ? `<a class="btn" href="${esc(last.hash)}" title="${esc(last.sub || '')}">↻ Tiếp tục: ${esc(last.label)}</a>` : '';
+  const doneAll = Object.values(LEARNED).reduce((a, x) => a + x.length, 0);
+  VIEW.innerHTML = `
+  <section class="hero">
+    <div class="hero-l">
+      <div class="eyebrow">Học Từ Vựng Qua Hình Ảnh · Tiếng Việt → Tiếng Anh</div>
+      <h1>Nhìn hình ảnh. <em>Nhớ từ vựng</em> ngay.</h1>
+      <p class="lead">Tất cả bài học và từ vựng được trình bày từ <strong>Tiếng Việt sang Tiếng Anh</strong> (Từ Tiếng Việt + Nghĩa &amp; Định nghĩa Tiếng Anh chi tiết), kèm hình minh họa phóng lớn rõ nét và phát âm song ngữ Việt – Anh.</p>
+    </div>
+    <div class="hero-r">
+      <div class="stats">
+        <div class="stat"><b>${fmt(ALLWORDS.length)}</b><span>Từ vựng</span></div>
+        <div class="stat"><b>${TOTAL_TOPICS}</b><span>Bài học</span></div>
+        <div class="stat"><b>${COLS.length}</b><span>Bộ sưu tập</span></div>
+        <div class="stat"><b>${fmt(doneAll)}</b><span>Đã thuộc</span></div>
+      </div>
+      <div class="cta"><a class="btn pri" href="#/t/a1-19?i=1">▶ Xem mẫu Bài 2: Con người (Slide Lớn)</a><a class="btn" href="#/c/pic">Từ điển Hình ảnh</a>${resume}</div>
+    </div>
+  </section>
+  <div class="grid tgrid" id="homeGrid">${COLS.map(c => band(c) + c.topics.map(topicTile).join('')).join('')}</div>${footer()}`;
+}
+
+function viewCollection(cid) {
+  const c = COLBY[cid];
+  VIEW.innerHTML = `
+  <section class="banner" style="--ac:${c.ac}"><div class="banner-bg" style="background:linear-gradient(135deg,${c.ac},transparent)"></div>
+    <div class="banner-in"><div>
+      <nav class="crumbs"><a href="#/">Trang chủ</a><span class="sep">/</span><span>${esc(c.name)}</span></nav>
+      <h1>${esc(c.name)}</h1>
+      <div class="meta"><span class="pill"><i></i>${esc(c.tag)}</span><span>${c.topics.length} bài học</span><span>${fmt(c.wordCount)} từ vựng</span></div>
+    </div>
+    <div class="actions"><a class="btn pri" href="#/c/${cid}/words?i=1">▶ Học tất cả ${fmt(c.wordCount)} từ</a></div></div></section>
+  <div class="toolbar"><div class="seg"><a class="on" href="#/c/${cid}">Danh sách Bài học</a><a href="#/c/${cid}/words">Tất cả từ vựng</a></div><span class="count">${c.topics.length} bài học</span></div>
+  <div class="grid tgrid" style="padding-top:24px">${c.topics.map(topicTile).join('')}</div>${footer()}`;
+}
+
+function viewTopic(t) {
+  const c = t.col, idx = c.topics.indexOf(t), prev = c.topics[idx - 1], next = c.topics[idx + 1];
+  const rel = (BYTITLE[t.enTitle.toLowerCase().trim()] || []).filter(x => x !== t);
+  const lc = learnedCount(t), pct = Math.round(lc / t.words.length * 100);
+  S.all = t.words;
+  VIEW.innerHTML = `
+  <section class="banner" style="--ac:${c.ac};--h:${t.h}">
+    <div class="banner-bg" id="bnBg" style="background:linear-gradient(135deg,hsl(${t.h} 40% 30%),transparent)"></div>
+    <div class="banner-in"><div>
+      <nav class="crumbs"><a href="#/">Trang chủ</a><span class="sep">/</span><a href="#/c/${c.id}">${esc(c.short)}</a><span class="sep">/</span><span>${esc(t.title)}</span></nav>
+      <h1>${esc(t.title)}</h1>
+      <div class="sub-en">English Topic: ${esc(t.enTitle)}</div>
+      <div class="meta"><span class="pill"><i></i>${esc(c.short)}${t.n ? ' · ' + esc(t.n) : ''}</span><span>${t.words.length} từ vựng (Vietnamese → English)</span>
+        <span class="prog"><b style="--p:${pct}%"><i></i></b><span id="bnPct">${lc} / ${t.words.length} đã thuộc</span></span></div>
+    </div>
+    <div class="actions"><button class="btn pri" id="studyAll">▶ Học Slide Hình Lớn (Study Slides)</button>${c.id !== 'pic' ? `<a class="btn" href="https://langeek.co/en/vocab/subcategory/${t.id}/word-list" target="_blank" rel="noopener noreferrer">LanGeek ↗</a>` : ''}</div></div></section>
+  ${toolbarHtml()}
+  <div class="grid words" id="wgrid"></div><div class="sentinel" id="sent"></div>
+  <div class="nextprev">
+    ${prev ? `<a class="np" href="#/t/${prev.key}"><small>← Bài trước</small><b>${esc(prev.title)}</b></a>` : '<span class="np off"><small>Đầu danh sách</small><b>—</b></span>'}
+    ${next ? `<a class="np next" href="#/t/${next.key}"><small>Bài tiếp theo →</small><b>${esc(next.title)}</b></a>` : '<span class="np next off"><small>Cuối danh sách</small><b>—</b></span>'}
+  </div>
+  ${rel.length ? `<div class="sec-title"><h2>Chủ đề liên quan</h2><span>${rel.length} bài</span></div><div class="grid tgrid">${rel.map(topicTile).join('')}</div>` : ''}
+  ${footer()}`;
+  bindToolbar(); applyList(); mountGrid();
+  $('#studyAll').onclick = () => openStudyAt(0);
+  const bg = $('#bnBg'); if (t.photo) { const im = new Image(); im.onload = () => { bg.style.background = ''; bg.style.backgroundImage = `url("${t.photo}")`; bg.style.backgroundSize = 'cover'; }; im.src = t.photo; }
+  store.set('vv.last', { hash: '#/t/' + t.key, label: t.title, sub: c.short + (t.n ? ' · ' + t.n : '') + ' · ' + t.words.length + ' từ' });
+}
+
+function viewDeck(d) {
+  S.all = d.words;
+  VIEW.innerHTML = `
+  <section class="banner" style="--ac:${d.col.ac}"><div class="banner-bg" style="background:linear-gradient(135deg,${d.col.ac},transparent)"></div>
+    <div class="banner-in"><div>
+      <nav class="crumbs"><a href="#/">Trang chủ</a><span class="sep">/</span><a href="#/c/${d.col.id}">${esc(d.col.short)}</a><span class="sep">/</span><span>Tất cả từ vựng</span></nav>
+      <h1>${esc(d.col.name)}</h1>
+      <div class="meta"><span class="pill"><i></i>${esc(d.col.tag)}</span><span>${fmt(d.words.length)} từ vựng</span></div></div>
+    <div class="actions"><button class="btn pri" id="studyAll">▶ Học Slide Hình Lớn</button></div></div></section>
+  ${toolbarHtml(true)}
+  <div class="grid words" id="wgrid"></div><div class="sentinel" id="sent"></div>${footer()}`;
+  bindToolbar(); applyList(); mountGrid();
+  $('#studyAll').onclick = () => openStudyAt(0);
+}
+
+/* ---- search (supports both Vietnamese & English queries) ---- */
+function runSearch(q) {
+  const s = q.trim().toLowerCase(); if (!s) return { topics: [], words: [] };
+  const topics = Object.values(TBY).filter(t => t.title.toLowerCase().includes(s) || t.enTitle.toLowerCase().includes(s));
+  const scored = [];
+  for (const w of ALLWORDS) {
+    let sc = 9;
+    if (w.lw === s || w.len === s) sc = 0;
+    else if (w.lw.startsWith(s) || w.len.startsWith(s)) sc = 1;
+    else if (w.lw.includes(s) || w.len.includes(s)) sc = 2;
+    else if (w.ld.includes(s)) sc = 3;
+    if (sc < 9) scored.push([sc, w]);
+  }
+  scored.sort((a, b) => a[0] - b[0]);
+  return { topics, words: scored.map(x => x[1]) };
+}
+function viewSearch(q) {
+  const res = runSearch(q);
+  S.all = res.words;
+  VIEW.innerHTML = `
+  <section class="banner"><div class="banner-bg" style="background:linear-gradient(135deg,var(--gold),transparent)"></div>
+    <div class="banner-in"><div><nav class="crumbs"><a href="#/">Trang chủ</a><span class="sep">/</span><span>Tìm kiếm</span></nav>
+    <h1>${q ? '“' + esc(q) + '”' : 'Tìm kiếm'}</h1>
+    <div class="meta"><span>${res.topics.length} chủ đề</span><span>${fmt(res.words.length)} từ vựng</span></div></div>
+    ${res.words.length ? '<div class="actions"><button class="btn pri" id="studyAll">▶ Học kết quả</button></div>' : ''}</div></section>
+  ${res.topics.length ? `<div class="sec-title"><h2>Chủ đề &amp; Bài học</h2><span>${res.topics.length}</span></div><div class="grid tgrid">${res.topics.slice(0, 120).map(topicTile).join('')}</div>` : ''}
+  <div class="sec-title"><h2>Từ vựng (Tiếng Việt → Tiếng Anh)</h2><span style="display:flex;gap:14px;align-items:center">${fmt(res.words.length)} kết quả ${viewSeg()}</span></div>
+  <div class="grid words" id="wgrid"></div><div class="sentinel" id="sent"></div>
+  ${!res.topics.length && !res.words.length ? `<div class="empty"><b>Không tìm thấy kết quả</b>Hãy thử nhập từ Tiếng Việt (VD: "người đàn ông", "con mèo") hoặc từ Tiếng Anh (VD: "man", "cat").</div>` : ''}${footer()}`;
+  applyList(); mountGrid(); bindViewSeg();
+  const b = $('#studyAll'); if (b) b.onclick = () => openStudyAt(0);
+}
+
+/* ====================== compare page ====================== */
+const STOP = new Set('a an the of to or and is are be in on with for who that which it its as by at from someone something somebody one into this these those can may very more most not no than but if when where their his her'.split(' '));
+const toks = d => (d.toLowerCase().match(/[a-z][a-z'’-]*/g) || []).filter(t => !STOP.has(t));
+function hlDef(d, shared, n) {
+  return d.split(/([A-Za-z][A-Za-z'’-]*)/).map((p, i) => {
+    if (i % 2 === 0) return esc(p);
+    const l = p.toLowerCase(); if (STOP.has(l) || n < 2) return esc(p);
+    return shared.has(l) ? `<span class="sh">${esc(p)}</span>` : `<mark class="df">${esc(p)}</mark>`;
+  }).join('');
+}
+function viewCompare(r) {
+  if (r.w) { S.cmp = r.w.split(',').map(fromKey).filter(Boolean).slice(0, 4); store.set('vv.cmp', S.cmp.map(wkey)); }
+  VIEW.innerHTML = `
+  <section class="banner" style="--ac:var(--gold)"><div class="banner-bg" style="background:linear-gradient(135deg,var(--gold),transparent)"></div>
+    <div class="banner-in"><div>
+      <nav class="crumbs"><a href="#/">Trang chủ</a><span class="sep">/</span><span>So sánh từ</span></nav>
+      <h1>So sánh Từ vựng (Vietnamese → English)</h1>
+      <div class="meta" id="cmpMeta"></div></div>
+    <div class="actions" id="cmpActions"></div></div></section>
+  <div id="cmpBody"></div>${footer()}`;
+  renderCompareBody();
+}
+function renderCompareBody() {
+  const ws = S.cmp, n = ws.length;
+  S.all = ws.slice(); applyList();
+  history.replaceState(null, '', '#/compare' + (n ? '?w=' + ws.map(wkey).join(',') : ''));
+  $('#cmpMeta').innerHTML = `<span>Đã chọn ${n} / 4 từ</span><span>Nhấn nút <b>⊞</b> trên bất kỳ thẻ từ nào để thêm vào bảng so sánh</span>`;
+  $('#cmpActions').innerHTML = n ? `${n > 1 ? '<button class="btn pri" id="cmpStudy">▶ Học các từ này</button><button class="btn" id="cmpCopy">Sao chép liên kết</button>' : ''}<button class="btn" id="cmpClear">Xóa tất cả</button>` : '';
+  const st = $('#cmpStudy'); if (st) st.onclick = () => openStudyAt(0);
+  const body = $('#cmpBody');
+  if (n < 2) {
+    body.innerHTML = `<div class="empty"><b>${n ? 'Chọn thêm 1 từ nữa để so sánh' : 'Chưa có từ nào để so sánh'}</b>Nhấn nút <b>⊞</b> trên các thẻ từ vựng để đặt tối đa 4 từ cạnh nhau.
+      ${n ? `<div class="chips2" style="justify-content:center;margin:18px 0">${ws.map(w => `<span>${esc(w.w)} (${esc(w.en)})</span>`).join('')}</div>` : ''}
+      <div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn pri" id="cmpFind">Tìm kiếm từ</button><a class="btn" href="#/t/a1-19">Xem Bài 2: Con người</a></div></div>`;
+    return;
+  }
+  const sets = ws.map(w => new Set(toks(w.d)));
+  const shared = new Set([...sets[0]].filter(t => sets.every(x => x.has(t))));
+  const uniq = ws.map((w, i) => [...sets[i]].filter(t => !shared.has(t)).slice(0, 8));
+  const same = f => new Set(ws.map(f)).size === 1;
+  const row = (label, fn, f) => {
+    const tag = f ? `<span class="tagx${same(f) ? '' : ' diff'}">${same(f) ? '= giống' : '≠ khác'}</span>` : '';
+    return `<div class="cr"><div class="cl">${label}${tag}</div>${ws.map(fn).map(c => `<div class="cc">${c}</div>`).join('')}</div>`;
+  };
+  const headCells = ws.map(w => `<div class="cc head"><button class="x" data-rm="${wkey(w)}" aria-label="Xóa ${esc(w.w)}">×</button>
+      <div class="ci">${imgTag(w.ph, w.w)}<span class="ph">${esc(w.w.charAt(0))}</span></div>
+      <div><a class="cw" href="#/t/${w.t.key}">${esc(w.w)}</a>${w.p ? `<span class="cp">[${esc(w.p)}]</span>` : ''}</div>
+      <div style="margin-top:4px;font-weight:700;color:var(--gold)">EN: ${esc(w.en)}</div>
+      <div><button class="say" data-say-vi="${esc(w.w)}">🇻🇳 VI</button><button class="say" data-say="${esc(w.en)}">🇬🇧 EN</button></div></div>`).join('');
+  body.innerHTML = `
+  <div class="cmp-ins">
+    <div><small>Điểm chung trong nghĩa Tiếng Anh</small><div class="chips2">${[...shared].map(t => `<span>${esc(t)}</span>`).join('') || '<span>Không có từ khóa chung</span>'}</div></div>
+    ${ws.map((w, i) => `<div><small>Điểm riêng của “${esc(w.w)} (${esc(w.en)})”</small><div class="chips2">${uniq[i].map(t => `<span class="d">${esc(t)}</span>`).join('') || '<span>—</span>'}</div></div>`).join('')}
+  </div>
+  <div class="cmp-scroll"><div class="cmp" style="--n:${n}">
+    <div class="cr"><div class="cl"></div>${headCells}</div>
+    ${row('Từ Tiếng Việt', w => `<strong>${esc(w.w)}</strong>`, w => w.w)}
+    ${row('Từ Tiếng Anh', w => `<strong style="color:var(--wcb)">${esc(w.en)}</strong>`, w => w.en)}
+    ${row('Từ loại', w => esc(w.p || '—'), w => w.p)}
+    ${row('Cấp độ / Bộ', w => esc(w.t.col.name), w => w.t.col.id)}
+    ${row('Chủ đề', w => `<a href="#/t/${w.t.key}" style="color:var(--wcb);font-weight:600">${esc(w.t.title)}</a>`, w => w.t.key)}
+    ${row('Nghĩa Tiếng Anh', w => `<strong>${esc(w.en)}</strong> — ` + hlDef(w.d, shared, n))}
+    ${row('Ví dụ câu', w => w.e.slice(0, 3).map(e => `<q>${hlExample(e, w.en)}</q>`).join('') || '—')}
+  </div></div>`;
+}
+
+/* ---- toolbar (filter / status / shuffle) ---- */
+function toolbarHtml(showSeg) {
+  return `<div class="toolbar"><div class="tb-right">
+    ${showSeg ? `<div class="seg"><a href="#/c/${S.r.cid}">Bài học</a><a class="on" href="#/c/${S.r.cid}/words">Tất cả từ</a></div>` : ''}
+    <div class="seg" id="stSeg"><button data-s="all" class="on">Tất cả</button><button data-s="todo">Chưa thuộc</button><button data-s="done">Đã thuộc</button></div>
+    <span class="filter"><input id="wf" type="search" placeholder="Lọc từ Tiếng Việt hoặc Tiếng Anh…" autocomplete="off"></span></div>
+    <div class="tb-right"><span class="count" id="wcount"></span>${viewSeg()}<button class="ibtn" id="tbShuf" title="Trộn thứ tự (S)">🔀 Shuffle</button></div></div>`;
+}
+function bindToolbar() {
+  $$('#stSeg button').forEach(b => b.onclick = () => { S.st = b.dataset.s; $$('#stSeg button').forEach(x => x.classList.toggle('on', x === b)); applyList(); mountGrid(); });
+  let t; $('#wf').oninput = e => { clearTimeout(t); t = setTimeout(() => { S.q = e.target.value.trim().toLowerCase(); applyList(); mountGrid(); }, 140); };
+  $('#tbShuf').onclick = toggleShuffle; bindViewSeg();
+}
+function applyList() {
+  let l = S.all;
+  if (S.q) l = l.filter(w => w.lw.includes(S.q) || w.len.includes(S.q) || w.ld.includes(S.q) || (w.p || '').includes(S.q));
+  if (S.st === 'todo') l = l.filter(w => !isLearned(w));
+  else if (S.st === 'done') l = l.filter(isLearned);
+  if (S.shuf) l = shuffled(l, S.shuf);
+  S.list = l;
+  const c = $('#wcount'); if (c) c.textContent = fmt(l.length) + ' từ';
+  const b = $('#tbShuf'); if (b) b.classList.toggle('on', !!S.shuf);
+}
+function toggleShuffle() {
+  S.shuf = S.shuf ? 0 : (Math.random() * 1e9 | 0) + 1;
+  applyList();
+  if (S.r.name !== 'home') mountGrid();
+  if (S.studyOpen) { S.si = 0; stepTo(0); }
+  toast(S.shuf ? 'Đã trộn ngẫu nhiên' : 'Đã về thứ tự gốc');
+}
+
+/* ---- chunked word grid ---- */
+function mountGrid() {
+  const host = $('#wgrid'); if (!host) return;
+  S.io && S.io.disconnect();
+  host.innerHTML = ''; S.shown = 0; host.className = 'grid words ' + (S.view === 'cards' ? 'cards' : 'tgrid compact');
+  if (!S.list.length) { host.innerHTML = `<div class="empty"><b>Không có từ nào</b>${S.st === 'done' ? 'Nhấn phím K khi học để đánh dấu từ đã thuộc.' : 'Hãy thử xóa bộ lọc tìm kiếm.'}</div>`; return; }
+  moreWords();
+  const sent = $('#sent');
+  S.io = new IntersectionObserver(es => { if (es[0].isIntersecting) { moreWords(); if (S.shown < S.list.length) { S.io.unobserve(sent); S.io.observe(sent); } } }, { rootMargin: '1400px 0px' });
+  S.io.observe(sent);
+}
+function moreWords(n = 96, upto) {
+  const host = $('#wgrid'); if (!host || S.shown >= S.list.length) return;
+  const end = Math.min(S.list.length, upto != null ? Math.max(upto, S.shown + 1) : S.shown + n);
+  let html = ''; for (let i = S.shown; i < end; i++) html += S.view === 'cards' ? wordCard(S.list[i], i, S.base) : wordTile(S.list[i], i, S.base);
+  host.insertAdjacentHTML('beforeend', html); S.shown = end; updateCmpUI();
+}
+
+/* ====================== nav chips ====================== */
+function buildChips() {
+  $('#chips').innerHTML = `<a class="chip-nav" data-c="" href="#/">Tất cả (All)</a>` +
+    COLS.map(c => `<a class="chip-nav" data-c="${c.id}" style="--ac:${c.ac}" href="#/c/${c.id}"><i></i>${esc(c.short)}<small>${c.topics.length}</small></a>` +
+    c.topics.map(t => `<a class="chip-nav" data-t="${t.key}" style="--ac:${c.ac}" href="#/t/${t.key}">${esc(t.title.split(' (')[0])}<small>${t.words.length}</small></a>`).join('')).join('');
+}
+function syncNav(r) {
+  const cid = r.cid || (r.tkey ? TBY[r.tkey].col.id : r.name === 'home' ? '' : null);
+  $$('#chips .chip-nav').forEach(a => {
+    if (a.dataset.t) a.classList.toggle('on', r.tkey === a.dataset.t);
+    else a.classList.toggle('on', !r.tkey && cid !== null && a.dataset.c === cid);
+  });
+  const q = $('#q'); if (r.name !== 'search' && document.activeElement !== q) q.value = '';
+  if (r.name === 'search' && document.activeElement !== q) q.value = r.q;
+  document.title = (r.name === 'topic' ? TBY[r.tkey].title + ' · ' : r.name === 'col' ? COLBY[r.cid].name + ' · ' : r.name === 'search' ? '“' + r.q + '” · ' : r.name === 'compare' ? 'So sánh · ' : '') + 'Từ vựng Hình ảnh (VI → EN)';
+  const act = $('#chips .on'); if (act && act.scrollIntoView) act.scrollIntoView({ inline: 'center', block: 'nearest' });
+}
+
+/* ====================== study (LARGE IMAGE + VIETNAMESE TO ENGLISH) ====================== */
+const ST = $('#study'), stImg = $('#stImg'), stStage = $('#stStage');
+function openStudyAt(i) { go('#' + S.base + '?i=' + (i + 1)); }
+function syncStudy(r, fromEvent) {
+  if (r.i && S.list.length) {
+    const was = S.studyOpen;
+    S.si = clamp(r.i - 1, 0, S.list.length - 1);
+    if (!was) { S.studyOpen = true; if (fromEvent) S.depth = 1; ST.classList.add('open'); document.body.classList.add('lock'); S.revealed = false; }
+    renderStudy();
+  } else closeStudyUI();
+}
+function closeStudyUI() {
+  if (!S.studyOpen) return;
+  S.studyOpen = false; stopPlay(); ST.classList.remove('open'); document.body.classList.remove('lock');
+  const tile = $(`#wgrid [data-n="${S.si}"]`) || (moreWords(96, S.si + 24), $(`#wgrid [data-n="${S.si}"]`));
+  if (tile) tile.scrollIntoView({ block: 'center' });
+}
+function closeStudy() {
+  if (!S.studyOpen) return;
+  if (S.depth) { S.depth = 0; history.back(); } else go('#' + S.base, true);
+}
+function stepTo(i) {
+  const n = S.list.length; if (!n) return;
+  S.si = (i % n + n) % n; S.revealed = false;
+  history.replaceState(null, '', '#' + S.base + '?i=' + (S.si + 1));
+  renderStudy();
+}
+const step = d => stepTo(S.si + d);
+function hlExample(ex, word) {
+  const s = esc(ex);
+  try { return s.replace(new RegExp('\\b(' + reEsc(esc(word)) + '\\w*)', 'gi'), '<strong>$1</strong>'); } catch (e) { return s; }
+}
+function renderStudy() {
+  const w = S.list[S.si]; if (!w) return;
+  ensureVietnameseWord(w);
+  ST.classList.toggle('guess', S.guess); ST.classList.toggle('revealed', !!S.revealed);
+  ST.style.setProperty('--h', w.h);
+  stStage.classList.toggle('noimg', !w.ph);
+  if (w.ph) {
+    stImg.classList.add('swap');
+    stImg.alt = w.w + ' (' + w.en + ')';
+    stImg.src = w.ph;
+    $('#stBg').style.backgroundImage = `url("${w.ph}")`;
+  }
+  $('#stTypo').textContent = w.w;
+  $('#stCrumb').textContent = w.t.col.short + ' · ' + w.t.title;
+  $('#stCount').textContent = fmt(S.si + 1) + ' / ' + fmt(S.list.length);
+  $('#stTopic').innerHTML = `<i style="background:${w.t.col.ac}"></i>${esc(w.t.col.short)}${w.t.n ? ' · ' + esc(w.t.n) : ''}`;
+  $('#stPos').textContent = w.p || 'word';
+  // Main word is Vietnamese; subtitle + meaning is English word + English definition
+  $('#stWord').textContent = w.w;
+  $('#stEnWord').textContent = 'EN: ' + w.en;
+  $('#stDefEn').textContent = w.en + ' (' + (w.p || 'word') + ')';
+  $('#stDef').textContent = w.d || 'No definition available.';
+  $('#stEx').innerHTML = w.e.map(e => `<q>${hlExample(e, w.en)}</q>`).join('');
+  $('#stExWrap').style.display = w.e.length ? '' : 'none';
+  const src = $('#stSrc'); if (w.t.col.id !== 'pic') { src.style.display = ''; src.href = `https://langeek.co/en/vocab/subcategory/${w.t.id}/word-list`; } else src.style.display = 'none';
+  $('#stProgTxt').textContent = Math.round((S.si + 1) / S.list.length * 100) + '%';
+  $('#stProgBar').style.width = (S.si + 1) / S.list.length * 100 + '%';
+  const ln = isLearned(w); $('#stLearn').classList.toggle('on', ln); $('#stCmp').classList.toggle('on', S.cmp.includes(w));
+  $('#stGuess').classList.toggle('on', S.guess); $('#stShuf').classList.toggle('on', !!S.shuf);
+  $('#stPlay').classList.toggle('on', !!S.play);
+  const nx = S.list[(S.si + 1) % S.list.length]; if (nx && nx.ph) { const p = new Image(); p.src = nx.ph; }
+  $('.st-scroll').scrollTop = 0;
+  store.set('vv.last', { hash: '#' + S.base + '?i=' + (S.si + 1), label: w.t.title.split(' (')[0] + ' — ' + w.w, sub: w.en + ' · study mode' });
+}
+stImg.addEventListener('load', () => stImg.classList.remove('swap'));
+stImg.addEventListener('error', () => { stStage.classList.add('noimg'); stImg.classList.remove('swap'); });
+const reveal = () => { if (!S.revealed) { S.revealed = true; ST.classList.add('revealed'); } };
+const toggleReveal = () => { if (S.guess && !S.revealed) reveal(); else if (S.guess) { S.revealed = false; ST.classList.remove('revealed'); } };
+function toggleGuess() { S.guess = !S.guess; S.revealed = false; renderStudy(); toast(S.guess ? 'Đã bật đoán từ — nhấn Space để xem đáp án' : 'Đã tắt chế độ đoán từ'); }
+function startPlay() { S.play = setInterval(() => { if (S.guess && !S.revealed) reveal(); else step(1); }, 4000); $('#stPlay').classList.add('on'); $('#stPlay').firstChild.textContent = '⏸ '; toast('Tự động phát: Bật'); }
+function stopPlay() { if (!S.play) return; clearInterval(S.play); S.play = null; const b = $('#stPlay'); b.classList.remove('on'); b.firstChild.textContent = '▶ '; }
+const togglePlay = () => S.play ? stopPlay() : startPlay();
+function speak(word, lang = 'en-US', btnEl = $('#stAudio')) {
+  if (!('speechSynthesis' in window)) return toast('Trình duyệt không hỗ trợ đọc giọng nói');
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(word);
+  u.lang = lang;
+  u.rate = .92;
+  if (btnEl) {
+    btnEl.classList.add('speaking');
+    u.onend = u.onerror = () => btnEl.classList.remove('speaking');
+  }
+  speechSynthesis.speak(u);
+}
+function learnToggle() {
+  const w = S.list[S.si]; if (!w) return;
+  const on = toggleLearned(w); $('#stLearn').classList.toggle('on', on);
+  const t = $(`#wgrid [data-n="${S.si}"]`); if (t) t.classList.toggle('is-done', on);
+  toast(on ? 'Đã đánh dấu thuộc từ' : 'Đã bỏ đánh dấu thuộc');
+}
+function openLb(src) { if (!src) return; $('#lb img').src = src; $('#lb').classList.add('open'); }
+
+/* ====================== wiring ====================== */
+$('#stClose').onclick = closeStudy;
+$('#stPrev').onclick = $('#stPrev2').onclick = () => step(-1);
+$('#stNext').onclick = $('#stNext2').onclick = () => step(1);
+$('#stReveal').onclick = reveal;
+$('#stAudio').onclick = () => { const w = S.list[S.si]; w && speak(w.en, 'en-US', $('#stAudio')); };
+$('#stAudioVi').onclick = () => { const w = S.list[S.si]; w && speak(w.w, 'vi-VN', $('#stAudioVi')); };
+$('#stCmp').onclick = () => { const w = S.list[S.si]; w && toggleCmp(w); };
+$('#stLearn').onclick = learnToggle; $('#stGuess').onclick = toggleGuess; $('#stPlay').onclick = togglePlay; $('#stShuf').onclick = toggleShuffle;
+$('#stZoom').onclick = stImg.onclick = () => { const w = S.list[S.si]; w && openLb(w.ph); };
+$('#lb').onclick = () => $('#lb').classList.remove('open');
+let tx = null;
+stStage.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+stStage.addEventListener('touchend', e => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); }, { passive: true });
+
+document.addEventListener('load', e => { if (e.target.tagName === 'IMG' && e.target.closest('.tile, .wc-img, .tc-img, .ci')) e.target.classList.add('in'); }, true);
+document.addEventListener('error', e => { const t = e.target; if (t.tagName === 'IMG' && t.closest('.tile, .wc-img, .tc-img, .ci, .tr-th')) t.remove(); }, true);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('.cmp-btn');
+  if (b) { e.preventDefault(); const w = fromKey(b.dataset.k); if (w) toggleCmp(w); return; }
+  const rm = e.target.closest('[data-rm]');
+  if (rm) { e.preventDefault(); const w = fromKey(rm.dataset.rm); const i = S.cmp.indexOf(w); if (i >= 0) { S.cmp.splice(i, 1); saveCmp(); if (S.r.name === 'compare') renderCompareBody(); } return; }
+  if (e.target.closest('#trClear')) { S.cmp = []; saveCmp(); return; }
+  const say = e.target.closest('[data-say]'); if (say) { speak(say.dataset.say, 'en-US', say); return; }
+  const sayVi = e.target.closest('[data-say-vi]'); if (sayVi) { speak(sayVi.dataset.sayVi, 'vi-VN', sayVi); return; }
+  if (e.target.closest('#cmpClear')) { S.cmp = []; saveCmp(); renderCompareBody(); return; }
+  if (e.target.closest('#cmpFind')) { qi.focus(); qi.select(); return; }
+  if (e.target.closest('#cmpCopy')) {
+    const u = location.href.split('#')[0] + '#/compare?w=' + S.cmp.map(wkey).join(',');
+    const ta = document.createElement('textarea'); ta.value = u; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Đã sao chép liên kết so sánh'); } catch (err) { toast('Hãy sao chép từ thanh địa chỉ'); }
+    ta.remove();
+  }
+});
+
+// search
+const qi = $('#q'); let qt;
+qi.addEventListener('input', () => {
+  clearTimeout(qt); qt = setTimeout(() => {
+    const v = qi.value.trim();
+    if (!v) { if (S.r.name === 'search') go('#/', true); return; }
+    go('#/search/' + encodeURIComponent(v), S.r.name === 'search');
+  }, 220);
+});
+qi.addEventListener('keydown', e => { if (e.key === 'Escape') { qi.value = ''; qi.blur(); if (S.r.name === 'search') history.length > 1 ? history.back() : go('#/', true); } });
+
+// theme, density, fullscreen
+function setTheme(t) { document.documentElement.setAttribute('data-theme', t); store.set('vv.theme', t); }
+$('#btnTheme').onclick = () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+function setDens(d) { document.body.dataset.dens = d; store.set('vv.dens', d); $$('.dens button').forEach(b => b.classList.toggle('on', b.dataset.d === d)); }
+$$('.dens button').forEach(b => b.onclick = () => setDens(b.dataset.d));
+const toggleFs = () => { if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {}); else document.exitFullscreen && document.exitFullscreen(); };
+$('#btnFs').onclick = toggleFs;
+
+// auto-hide header while scrolling down
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY, h = $('#hdr');
+  if (y > lastY + 6 && y > 220) h.classList.add('hide'); else if (y < lastY - 6 || y < 120) h.classList.remove('hide');
+  lastY = y;
+}, { passive: true });
+function showHdr() { $('#hdr').classList.remove('hide'); lastY = 0; }
+
+// keyboard
+document.addEventListener('keydown', e => {
+  const tag = e.target.tagName;
+  if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if (k === '/') { e.preventDefault(); qi.focus(); qi.select(); return; }
+  if (k === 'f') return toggleFs();
+  if (k === 'escape') { if ($('#lb').classList.contains('open')) $('#lb').classList.remove('open'); else closeStudy(); return; }
+  if (S.studyOpen) {
+    if (e.key === 'ArrowRight' || k === 'd') step(1);
+    else if (e.key === 'ArrowLeft' || k === 'a') step(-1);
+    else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); if (S.guess) toggleReveal(); else step(1); }
+    else if (k === 'p') $('#stAudio').click();
+    else if (k === 'v') $('#stAudioVi').click();
+    else if (k === 'g') toggleGuess();
+    else if (k === 's') toggleShuffle();
+    else if (k === 'c') togglePlay();
+    else if (k === 'k') learnToggle();
+    else if (k === 'z') $('#stZoom').click();
+  } else if (k === 's' && $('#tbShuf')) toggleShuffle();
+});
+
+/* ====================== boot ====================== */
+S.view = store.get('vv.view', 'cards') === 'mosaic' ? 'mosaic' : 'cards';
+setTheme(store.get('vv.theme', 'light'));
+setDens(store.get('vv.dens', 'm'));
+buildChips();
+route(false);
+})();
+</script>
+</body>
+</html>

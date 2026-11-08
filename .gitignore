@@ -17,6 +17,5 @@ yarn-error.log*
 # Temporary & Log files
 *.log
 *.tmp
-*.bak
 .system_generated/
 scratch/
